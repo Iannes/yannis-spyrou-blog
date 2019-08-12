@@ -1,12 +1,110 @@
 ---
-date: "2019-01-20"
-title: "Using remark-images"
+date: "2019-08-12"
+title: "Creating an AWS Amplify application"
 categories:
-  - Remark
+  - Serverless
 ---
 
-You can also use nearly all remark plugins, such as remark-images.
+The AWS services that will are going to be using are the following:
 
-Here is an inline image
+ - AWS Amplify Framework
 
-![](./315.jpg)
+ - AWS AppSync SDK
+
+### Services Overview
+
+AWS Amplify is a JavaScript library for frontend and mobile developers building cloud-enabled applications. It provides a declarative and easy-to-use interface across different categories of cloud operations. 
+
+AWS Amplify goes well with any JavaScript based frontend workflow, and React Native for mobile developers. The default implementation works with AWS, but AWS Amplify is designed to be open and pluggable for any custom backend or service.
+
+AWS AppSync is a fully managed GraphQL service with real-time data synchronisation and offline programming features.  It provides a reliable data layer to access multiple data sources using your AWS account. 
+
+### Prerequisites
+
+- Mac or Win10 local development environment node version 10.x or greater
+
+- brew install nvm for OS X
+
+- choco install nvm for Windows
+
+- npm version 5.x or greater (comes with npx)
+
+- yarn
+
+- npm i -g yarn
+
+- A command-line shell program
+
+- AWS Account with appropriate permissions to create the related resources
+
+- AWS CLI with output configured as JSON
+
+- AWS Amplify CLI and AWS AppSync 
+
+### Amplify CLI &amp; React app installation
+
+To install AWS Amplify CLI run the below command:
+
+```shell
+npm install -g @aws-amplify/cli
+```
+If everything went well, then you're good to go! Next step is scaffolding our React app.
+
+All we need to do is run the following commands:
+
+```bash
+npx create-react-app mygreatapp
+
+cd mygreatapp
+
+npm install -g @aws-amplify
+
+```
+Next command is a one-time setup step.
+Going forward on new projects, we won't have to configure this again. 
+
+```shell
+  amplify configure
+```
+
+The amplify configure step helps you with the following:
+
+- Signing up and signing in into AWS
+
+- Setting up an IAM user with the appropriate policies for the CLI to deploy AWS resources on behalf of the customer. ( By default AWS gives administrator access to this IAM user since the CLI needs access to a variety of services for deployments. )
+
+- Creating an AWS Profile on your local system with reference to the accessKey and secretKey tied to the IAM user created in the above step. 
+
+This AWS Profile could be given a custom name and can be used for initialising any number of projects moving forward. Essentially the AWS profile defines which AWS account and region the AWS resources would be deployed to.
+
+Once we run `amplify configure`, the CLI will take us through the initial configuration.
+
+```shell
+- ? region: `<your-region-of-choice>`
+
+- ? user name: `<your.email>@example.com`
+
+- ? accessKeyId: `<'Access key ID' from credentials.csv>`
+
+- ? secretAccessKey: `<'Secret access key' from credentials.csv>`
+  
+- ? Profile Name: `default` 
+```
+
+Next we'll need to run the *amplify init* command, a one-time initialisation step for our Amplify-powered cloud app.
+
+```shell
+amplify init
+```
+
+We only need to run this once for each project to connect our app with an AWS backend. 
+This setup helps us with the following:
+
+- Selecting our AWS Profile which would be used to provision cloud resources for your app
+
+- Selecting the frontend framework for our app and corresponding frontend framework related configurations (like the build command to build your frontend code). This information helps the CLI publish the app to the cloud (after executing the build command), as well as helping to run the app locally for you to test using the amplify run command.
+
+That was it! If everything went well, you have successfully
+initialised a cloud project using Amplify. 
+
+Stay tuned for the next part of this series that will take you through the provisioning of the remote servers.
