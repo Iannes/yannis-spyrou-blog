@@ -118,6 +118,30 @@ This setup helps us with the following:
 
 This information helps the CLI publish the app to the cloud (after executing the build command), as well as helping to run the app locally.
 
+```shell
+   - ? Do you want to use an existing environment? Yes
+
+   - ? Choose the environment you would like to use: dev
+
+   - ? Choose your default editor: Your preferred editor
+
+   - ? Do you want to use an AWS profile? Yes
+
+   - ? Please choose the profile you want: default
+```
+
+This will automatically generate a `aws-exports.js` file under your `src` directory.
+This file holds all security credentials for your API so you want to keep this safe.
+
+On your terminal, run the following command:
+
+```shell
+$ echo "aws-exports.js" >> .gitignore
+```
+
+This will create a `.gitignore` file and append the `aws-exports.js` line to 
+it so it doesn't accidentally get commited to your repo.
+
 To verify that the CLI is set up for your React app, run the following command:
 
 ```shell
