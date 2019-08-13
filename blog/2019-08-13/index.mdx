@@ -42,7 +42,6 @@ This will open a graphQL Schema in your editor.
 
 Since this tutorial is meant to help you with a simple setup, 
 we are not going to make any changes to our GraphQL schema for the time being.
-
 After you have saved the file, head back to your terminal and press Enter to finish the setup.
 
 This is what you should see after finishing the process:
@@ -58,7 +57,6 @@ Successfully added resource dev locally
 
 ```
 This means that our api is now setup in our computer, but what about the remote server?
-
 All we need to do to set this up is run the following command:
 
 ```shell
@@ -69,7 +67,6 @@ This command will go ahead and provision the remote server for us.
 The whole process should take roughly 15 minutes, so you have plenty of time for a coffee!
 
 Once the resources are created, we’re ready to create the app & begin interacting with the API.
-
 Apart from testing our API through the AppSync dashboard, we can also test it locally!
 
 All we need to do is run the following command and a local AppSync mock endpoint will start up:
@@ -77,6 +74,8 @@ All we need to do is run the following command and a local AppSync mock endpoint
 ```shell
 $ amplify mock
 ```
+
 The terminal will output a link to an instance of the GraphiQL IDE, 
 where you can see the graphQL docs on any field or type and test your queries and mutations.
 
+For more information on Amplify's local framework testing please visit [this link](https://aws.amazon.com/blogs/mobile/amplify-framework-local-mocking/)
