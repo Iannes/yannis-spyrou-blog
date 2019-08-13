@@ -8,7 +8,7 @@ import { Layout, Wrapper, Header } from '../components'
 
 import config from '../../config'
 
-const Content = styled.div`
+const Content = styled.section`
   grid-column: 2;
   box-shadow: 0 4px 120px rgba(0, 0, 0, 0.1);
   border-radius: 1rem;

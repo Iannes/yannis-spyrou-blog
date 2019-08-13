@@ -5,7 +5,7 @@ import styled from 'styled-components'
 
 import { Layout, Article, Wrapper, Button, SectionTitle } from '../components'
 
-const Content = styled.div`
+const Content = styled.article`
   grid-column: 2;
   box-shadow: 0 4px 120px rgba(0, 0, 0, 0.1);
   border-radius: 1rem;
@@ -19,7 +19,7 @@ const Content = styled.div`
   overflow: hidden;
 `
 
-const Hero = styled.div`
+const Hero = styled.article`
   grid-column: 2;
   padding: 3rem 2rem 6rem 2rem;
   text-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);

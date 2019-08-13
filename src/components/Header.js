@@ -16,7 +16,7 @@ const Wrapper = styled.header`
   box-shadow: inset 0px -10px 30px 0px rgba(0, 0, 0, 0.1);
 `
 
-const Content = styled.div`
+const Content = styled.header`
   max-width: ${props => props.theme.maxWidth};
   margin: 0 auto;
 

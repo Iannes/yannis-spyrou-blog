@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-const SectionTitle = styled.div`
+const SectionTitle = styled.article`
   font-size: ${props => props.theme.fontSize.small};
   text-transform: uppercase;
   font-weight: bold;

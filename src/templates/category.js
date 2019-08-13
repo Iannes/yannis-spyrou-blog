@@ -7,7 +7,7 @@ import styled from 'styled-components'
 import { Layout, Wrapper, Header, Subline, Article, SectionTitle } from '../components'
 import config from '../../config'
 
-const Content = styled.div`
+const Content = styled.article`
   grid-column: 2;
   box-shadow: 0 4px 120px rgba(0, 0, 0, 0.1);
   border-radius: 1rem;

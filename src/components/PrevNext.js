@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import { Link } from 'gatsby'
 
-const Wrapper = styled.div`
+const Wrapper = styled.section`
   display: flex;
   margin: 6rem auto 0 auto;
   a {
@@ -14,7 +14,7 @@ const Wrapper = styled.div`
   justify-items: center;
 `
 
-const Prev = styled.div`
+const Prev = styled.article`
   span {
     text-transform: uppercase;
     font-size: 0.8rem;
@@ -22,7 +22,7 @@ const Prev = styled.div`
   }
 `
 
-const Next = styled.div`
+const Next = styled.article`
   margin-left: auto;
   text-align: right;
   span {

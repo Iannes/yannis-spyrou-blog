@@ -46,7 +46,7 @@ const Title = styled.h1`
   margin-bottom: 1rem;
 `
 
-const PostContent = styled.div`
+const PostContent = styled.article`
   margin-top: 4rem;
 `
 
