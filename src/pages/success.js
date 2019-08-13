@@ -48,7 +48,7 @@ const Success = () => (
         <Link to="/">{config.siteTitle}</Link>
       </Header>
       <Content>
-        <h1>Your message was sent!</h1>
+        <h2>Your message was sent!</h2>
         <p>I'll answer your request as quick as possible.</p>
       </Content>
     </Wrapper>
