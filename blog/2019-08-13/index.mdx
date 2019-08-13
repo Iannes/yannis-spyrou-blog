@@ -87,6 +87,12 @@ Under the operation column, you should be able to see that there is no changes.
 That means that we have successfully provisioned our remote server 
 and our local and remote environments are in sync!
 
+The Auth column means we can use an Amazon Cognito User Pool to act as the backend 
+that users will be able to sign up and sign in. If you want to read more on this, 
+have a look at the ‘Authentication’ steps from the [AWS Amplify Authentication guide](https://aws-amplify.github.io/docs/js/authentication).
+
+### Testing our API
+
 Once we've verified our resources have been created, 
 we’re ready to create the app & begin interacting with the API.
 Apart from testing our API through the AppSync dashboard, we can test it locally as well!
@@ -100,7 +106,7 @@ $ amplify mock
 The terminal will output a link to an instance of the GraphiQL IDE, 
 where you can see the GraphQL docs on any field or type and test your queries and mutations.
 
-For more information on Amplify's local framework testing please visit [this link](https://aws.amazon.com/blogs/mobile/amplify-framework-local-mocking/)
+For more information on Amplify's local framework testing please visit [this link](https://aws.amazon.com/blogs/mobile/amplify-framework-local-mocking/).
 
 You have now successfully provisioned the remote servers and hopefully were able 
 to test all your resources locally using the GraphiQL IDE.
