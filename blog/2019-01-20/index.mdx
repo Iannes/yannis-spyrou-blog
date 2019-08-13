@@ -1,20 +1,24 @@
 ---
 date: "2019-08-12"
-title: "Creating an AWS Amplify application"
+title: "Get started with AWS Amplify adn React"
 categories:
   - Serverless
 ---
 
 ### Overview
 
+This is the first post in a three-part series that shows you how to install 
+and configure a serverless web app on AWS using AWS Amplify and AppSync 
+for the backend and Create React App for the frontend.
+
 AWS Amplify is a JavaScript library for frontend and mobile developers building cloud-enabled applications.
 
 AWS AppSync is a fully managed GraphQL service with real-time data synchronisation and offline programming features.  
 
-It provides a reliable data layer to access multiple data sources using your AWS account. 
+In this first post, you will learn how to:
 
-In this tutorial, you will learn how to build a cloud-enabled 
-web app with React and AWS Amplify.
+  - Install &amp; configure the Amplify CLI from your command line
+  - initialise an Amplify project with a React app
 
 ### Prerequisites
 
@@ -29,25 +33,32 @@ web app with React and AWS Amplify.
 To install AWS Amplify CLI run the below command:
 
 ```shell
-npm install -g @aws-amplify/cli
+$ npm install -g @aws-amplify/cli
 ```
-If everything went well, then you're good to go! Next step is scaffolding our React app.
 
-All we need to do is run the following commands:
+Next step is scaffolding our React app.
+
 
 ```bash
-npx create-react-app mygreatapp
+$ npx create-react-app mygreatapp
 
-cd mygreatapp
+$ cd mygreatapp
 
-npm install -g @aws-amplify
+$ npm install -g @aws-amplify
 
 ```
+
+We will also need to install React-specific Amplify UI components, by running the following command:
+
+```shell
+$ npm install aws-amplify-react
+```
+
 Next command is a one-time setup step.
 Going forward on new projects, we won't have to configure this again. 
 
 ```shell
-  amplify configure
+$ amplify configure
 ```
 
 The amplify configure step helps you with the following:
@@ -76,22 +87,46 @@ Once we run `amplify configure`, the CLI will take us through the initial config
 - ? Profile Name: `default` 
 ```
 
-Next we'll need to run the *amplify init* command, a one-time initialisation step for our Amplify-powered cloud app.
+Before initialising our Amplify project,we need to make sure we are in the right directory in our React app.
+
+In my case all I need to do is:
 
 ```shell
-amplify init
+$ cd mygreatapp
+```
+
+Next we'll need to run the *amplify init* command.
+
+This command will run you through the init process.
+Go ahead and accept the defaults and use ‘dev’ or  `test` as environment name.
+
+```shell
+$ amplify init
 ```
 
 We only need to run this once for each project to connect our app with an AWS backend. 
+
 This setup helps us with the following:
 
 - Selecting our AWS Profile which would be used to provision cloud resources for your app
 
 - Selecting the frontend framework for our app and corresponding frontend framework related configurations (like the build command to build your frontend code). 
 
-This information helps the CLI publish the app to the cloud (after executing the build command), as well as helping to run the app locally for you to test using the amplify run command.
+This information helps the CLI publish the app to the cloud (after executing the build command), as well as helping to run the app locally.
+
+To verify that the CLI is set up for your React app, run the following command:
+
+```shell
+$ amplify status
+```
+
+If all went well, the Amplify CLI should output the following status table with no resources listed:
+
+| Category | Resource Name | | Operation  | Provider Plugin |
+| ---------| ------------- | | ---------- | --------------- |
+
 
 That was it! If everything went well, you have successfully
-initialised a cloud project using Amplify. 
+initialised a cloud project using Amplify.
 
 Stay tuned for the next part of this series that will take you through the provisioning of the remote servers.
