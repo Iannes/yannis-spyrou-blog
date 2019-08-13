@@ -1,0 +1,67 @@
+---
+date: "2019-08-14"
+title: "Connect to the API from React"
+categories:
+  - Serverless
+---
+
+![](../2019-08-12/315.jpg)
+
+### Overview
+
+This is the third post in a three-part series that shows you how to install 
+and configure a serverless web app on AWS using AWS Amplify and AppSync 
+for the backend and Create React App for the frontend.
+
+### Configuring your React app:
+
+To connect to the new API, we first need to configure our React project with our Amplify project 
+credentials. In your `src` folder there is a file called `aws-exports.js`.
+This file holds all of the information our local project needs to know about our cloud resources.
+
+As I mentioned in my previous post, this file should be added to a `.gitignore` file, so if you haven't done so already,
+go ahead and run the following command:
+
+```shell
+$ echo "aws-exports.js" >> .gitignore
+```
+
+To configure the React app, open `src/app.js` &amp; add the following lines:
+
+```js
+import { withAuthenticator } from 'aws-amplify-react';
+
+import Amplify from 'aws-amplify';
+
+import { Rehydrated } from 'aws-appsync-react';
+
+import config from 'aws-exports';
+
+Amplify.configure(config);
+```
+
+The last line tells Amplify to use the `aws-exports.js` file to connect to the correct backend API.
+
+You'll notice however that we have some imports that have to do with authentication.
+
+```js
+import { withAuthenticator } from 'aws-amplify-react';
+```
+These are helper functions provided by Amplify so we can use the out-of-the-box solution that 
+AWS provides us with for auth services.
+
+After the `App` declaration, at the end of the file you should add the following lines:
+
+```js
+export default withAuthenticator(App);
+```
+
+To test if everything works as intended, you should run `yarn start` or `npm start` 
+and see if you are presented with the default AWS login UI.
+
+If this is the case, try and register as a new user. Aws should send an email to you so you can confirm your email address.
+After that, you are going to be able to login and see the React app in all its glory!
+
+You have now successfully connected to the API from your React app.
+
+Stay tuned for the next part of this series that will take you through...
