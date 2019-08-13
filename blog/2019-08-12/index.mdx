@@ -112,15 +112,12 @@ Go ahead and accept the defaults and use ‘dev’ or  `test` as environment nam
 $ amplify init
 ```
 
-We only need to run this once for each project to connect our app with an AWS backend. 
-
 This setup helps us with the following:
 
 - Selecting our AWS Profile which would be used to provision cloud resources for your app
 
-- Selecting the frontend framework for our app and corresponding frontend framework related configurations (like the build command to build your frontend code). 
+- Selecting the frontend framework for our app and corresponding frontend framework related configurations.
 
-This information helps the CLI publish the app to the cloud (after executing the build command), as well as helping to run the app locally.
 
 ```shell
    - ? Do you want to use an existing environment? Yes
@@ -143,7 +140,7 @@ On your terminal, run the following command:
 $ echo "aws-exports.js" >> .gitignore
 ```
 
-This will create a `.gitignore` file and append the `aws-exports.js` line to 
+The above command will create a `.gitignore` file and append the `aws-exports.js` line to 
 it so it doesn't accidentally get commited to your repo.
 
 To verify that the CLI is set up for your React app, run the following command:
@@ -161,8 +158,6 @@ If all went well, the Amplify CLI should output the following status table with 
 
 Stay tuned for the next part of this series that will take you through the provisioning of the remote servers.
 
-I am Yannis Spyrou.
+Do you think something is missing from this article ?
 
-I'm a Frontend Developer working with React, ES6 / TypeScript &amp; AWS Serverless technologies.
-
-Find me on Twitter on: [@SpyrouYannis](https://twitter.com/SpyrouYannis).
+Let me know on [Twitter](https://twitter.com/SpyrouYannis).
