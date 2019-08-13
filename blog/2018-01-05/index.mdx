@@ -1,74 +1,59 @@
 ---
-date: "2018-01-05"
-title: "React-Live & Code example"
+date: "2019-08-13"
+title: "Set Up AWS Amplify Backend"
 categories:
-  - Coding
-  - Help
+  - Serverless
 ---
 
-Zwei flinke Boxer jagen die quirlige Eva und ihren Mops durch Sylt. Franz jagt im komplett verwahrlosten Taxi quer durch Bayern. Zwölf Boxkämpfer jagen Viktor quer über den großen Sylter Deich. Vogel Quax zwickt Johnys Pferd Bim. Sylvia wagt quick den Jux bei Pforzheim. Polyfon zwitschernd aßen Mäxchens Vögel Rüben, Joghurt und Quark. "Fix, Schwyz! " quäkt Jürgen blöd vom Paß. Victor jagt zwölf Boxkämpfer quer über den großen Sylter Deich. Falsches Üben von Xylophonmusik quält jeden größeren Zwerg. Heizölrückstoßabdämpfung. Zwei flinke Boxer jagen die quirlige Eva und ihren Mops durch Sylt. Franz jagt im komplett verwahrlosten Taxi quer durch Bayern. Zwölf Boxkämpfer jagen Viktor quer über den großen Sylter Deich. Vogel Quax zwickt Johnys Pferd Bim.
+### Overview
 
-### A live code sample:
+This is the second post in a three-part series that shows you how to install 
+and configure a serverless web app on AWS using AWS Amplify and AppSync 
+for the backend and Create React App for the frontend.
 
-```js react-live
-const onClick = () => {
-  alert("You opened me");
-};
-render(<button onClick={onClick}>Alohomora!</button>);
+### Add API and Database:
+
+Add a GraphQL API to your app and automatically provision 
+a database with the following command (accepting all defaults is OK):
+
+```shell
+$ amplify add api
 ```
 
-### Just code
+This command will run you through the creation of the AWS AppSync GraphQL API.
 
-```js
-(function() {
-
-var cache = {};
-var form = $('form');
-var minified = true;
-
-var dependencies = {};
-
-var treeURL = 'https://api.github.com/repos/PrismJS/prism/git/trees/gh-pages?recursive=1';
-var treePromise = new Promise(function(resolve) {
-	$u.xhr({
-		url: treeURL,
-		callback: function(xhr) {
-			if (xhr.status < 400) {
-				resolve(JSON.parse(xhr.responseText).tree);
-			}
-		}
-	});
-});
+```shell
+? Please select from one of the below services: GraphQL
+? Provide API name: mygreatapp
+? Choose an authorization type for the API: AMAZON_COGNITO_USER_POOLS
+? Do you have an annotated GraphQL schema?: N
+? Do you want a guided schema creation? Y
+? What best describes your project? One-to-many relationship
+? Do you want to edit the schema now? Y
 ```
 
-Text between those lines
+This will open a graphQL Schema in your editor.
 
-```md
-# asdfasdfads
+Since this tutorial is meant to help you with a simple setup, 
+we are not going to make any changes to our GraphQL schema for the time being.
 
-- auesufuaus
+After you have saved the file, head back to your terminal and press Enter to finish the setup.
+
+This is what you should see after finishing the process:
+
+```shell
+GraphQL schema compiled successfully.
+
+Edit your schema at /dev/amplify/backend/api/dev/schema.graphql 
+or place .graphql files in a directory at /dev/amplify/backend/api/dev/schema
+
+Successfully added resource dev locally
+```
+This means that our api is now setup in our computer, but what about the remote server?
+
+All we need to do to set this up is run the following command:
+
+```shell
+$ amplify push
 ```
 
-```css
-code[class*="language-"],
-pre[class*="language-"] {
-  color: black;
-  background: none;
-  font-family: Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
-  text-align: left;
-  white-space: pre;
-  word-spacing: normal;
-  word-break: normal;
-  word-wrap: normal;
-  line-height: 1.5;
-
-  -moz-tab-size: 4;
-  -o-tab-size: 4;
-  tab-size: 4;
-
-  -webkit-hyphens: none;
-  -moz-hyphens: none;
-  -ms-hyphens: none;
-  hyphens: none;
-}
-```
