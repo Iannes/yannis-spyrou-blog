@@ -69,5 +69,14 @@ This command will go ahead and provision the remote server for us.
 The whole process should take roughly 15 minutes, so you have plenty of time for a coffee!
 
 Once the resources are created, we’re ready to create the app & begin interacting with the API.
-We can also now view the API in the AWS AppSync dashboard by clicking on the new API name.
+
+Apart from testing our API through the AppSync dashboard, we can also test it locally!
+
+All we need to do is run the following command and a local AppSync mock endpoint will start up:
+
+```shell
+$ amplify mock
+```
+The terminal will output a link to an instance of the GraphiQL IDE, 
+where you can see the graphQL docs on any field or type and test your queries and mutations.
 
