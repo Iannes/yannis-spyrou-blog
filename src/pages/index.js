@@ -49,9 +49,9 @@ const IndexPage = ({
   <Layout>
     <Wrapper>
       <Hero>
-        <h1>Hi.</h1>
+        <h2>Hi I&apos;m Yannis.</h2>
         <p>
-          I&apos;m Yannis Spyrou, a Frontend Developer, working with React, ES6, TypeScript and AWS Serverless technologies.
+        I&apos;m a frontend dev, working with TypeScript / React &amp; AWS Serverless.
         </p>
         <Link to="/contact">
           <Button big>
