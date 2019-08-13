@@ -24,11 +24,17 @@ This command will run you through the creation of the AWS AppSync GraphQL API.
 
 ```shell
 ? Please select from one of the below services: GraphQL
+
 ? Provide API name: mygreatapp
+
 ? Choose an authorization type for the API: AMAZON_COGNITO_USER_POOLS
+
 ? Do you have an annotated GraphQL schema?: N
+
 ? Do you want a guided schema creation? Y
+
 ? What best describes your project? One-to-many relationship
+
 ? Do you want to edit the schema now? Y
 ```
 
@@ -48,6 +54,7 @@ Edit your schema at /dev/amplify/backend/api/dev/schema.graphql
 or place .graphql files in a directory at /dev/amplify/backend/api/dev/schema
 
 Successfully added resource dev locally
+
 ```
 This means that our api is now setup in our computer, but what about the remote server?
 
@@ -56,4 +63,10 @@ All we need to do to set this up is run the following command:
 ```shell
 $ amplify push
 ```
+
+This command will go ahead and provision the remote server for us. 
+The whole process should take roughly 15 minutes, so you have plenty of time for a coffee!
+
+Once the resources are created, we’re ready to create the app & begin interacting with the API.
+We can also now view the API in the AWS AppSync dashboard by clicking on the new API name.
 
