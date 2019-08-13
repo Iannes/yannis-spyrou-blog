@@ -66,8 +66,30 @@ $ amplify push
 This command will go ahead and provision the remote server for us. 
 The whole process should take roughly 15 minutes, so you have plenty of time for a coffee!
 
-Once the resources are created, we’re ready to create the app & begin interacting with the API.
-Apart from testing our API through the AppSync dashboard, we can also test it locally!
+To verify that the CLI is set up correctly, run the following command:
+
+```shell
+$ amplify status
+```
+
+If all went well, the Amplify CLI should output the following status table with no resources listed:
+
+```shell
+| Category | Resource Name         | Operation  | Provider Plugin   |
+| ---------| --------------------- | ---------- | ---------------   |
+
+| Auth     | mygreatappac234765    | No Change  | awscloudformation |
+
+| Api      | mygreatapp            | No Change  | awscloudformation |
+
+```
+Under the operation column, you should be able to see that there is no changes.
+That means that we have successfully provisioned our remote server 
+and our local and remote environments are in sync!
+
+Once we've verified our resources have been created, 
+we’re ready to create the app & begin interacting with the API.
+Apart from testing our API through the AppSync dashboard, we can test it locally as well!
 
 All we need to do is run the following command and a local AppSync mock endpoint will start up:
 
@@ -76,12 +98,11 @@ $ amplify mock
 ```
 
 The terminal will output a link to an instance of the GraphiQL IDE, 
-where you can see the graphQL docs on any field or type and test your queries and mutations.
+where you can see the GraphQL docs on any field or type and test your queries and mutations.
 
 For more information on Amplify's local framework testing please visit [this link](https://aws.amazon.com/blogs/mobile/amplify-framework-local-mocking/)
 
-If everything went well, you have successfully
-provisioned the remote servers and hopefully were able 
+You have now successfully provisioned the remote servers and hopefully were able 
 to test all your resources locally using the GraphiQL IDE.
 
 Stay tuned for the next part of this series that will take you through integrating AWS into your React app.
