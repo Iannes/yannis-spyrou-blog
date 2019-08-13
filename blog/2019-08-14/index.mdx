@@ -42,12 +42,13 @@ The last line tells Amplify to use the `aws-exports.js` file to connect to the c
 
 You'll notice however that we have some imports that have to do with authentication.
 
-### withAuthenticator HOC
-
 ```js
 import { withAuthenticator } from 'aws-amplify-react';
 ```
-These are helper functions provided by Amplify so we can use the out-of-the-box solution that 
+
+### withAuthenticator HOC
+
+`withAuthenticator` is a helper function provided by Amplify so we can use the out-of-the-box solution that 
 AWS provides us with for auth services.
 
 The `App.js` file should now look something like this:
