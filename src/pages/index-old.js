@@ -1,11 +1,9 @@
 import React from 'react'
-import Helmet from 'react-helmet'
-import { Link } from 'gatsby'
+import PropTypes from 'prop-types'
+import { Link, graphql } from 'gatsby'
 import styled from 'styled-components'
 
-import { Layout, Header, Wrapper, Button, SectionTitle } from '../components'
-
-import config from '../../config'
+import { Layout, Article, Wrapper, Button, SectionTitle } from '../components'
 
 const Content = styled.article`
   grid-column: 2;
@@ -43,14 +41,13 @@ const Hero = styled.article`
   }
 `
 
-const IndexPage = () => {
-return (
+const IndexPage = ({
+  data: {
+    allMdx: { nodes: posts },
+  },
+}) => (
   <Layout>
     <Wrapper>
-    <Helmet title={`Home | ${config.siteTitle}`} />
-      <Header>
-        <Link to="/">{config.siteTitle}</Link>        
-      </Header>
       <Hero>
         <h2>Hi I&apos;m Yannis.</h2>
         <p>
@@ -66,12 +63,48 @@ return (
         </Link>
       </Hero>
       <Content>
-        <SectionTitle>Content</SectionTitle>
-        Home page
+        <SectionTitle>Latest stories</SectionTitle>
+        {posts.map(post => (
+          <Article
+            title={post.frontmatter.title}
+            date={post.frontmatter.date}
+            excerpt={post.excerpt}
+            timeToRead={post.timeToRead}
+            slug={post.fields.slug}
+            categories={post.frontmatter.categories}
+            key={post.fields.slug}
+          />
+        ))}
       </Content>
     </Wrapper>
   </Layout>
-)}
+)
 
 export default IndexPage
 
+IndexPage.propTypes = {
+  data: PropTypes.shape({
+    allMdx: PropTypes.shape({
+      nodes: PropTypes.array.isRequired,
+    }),
+  }).isRequired,
+}
+
+export const IndexQuery = graphql`
+  query IndexQuery {
+    allMdx(sort: { fields: [frontmatter___date], order: DESC }) {
+      nodes {
+        fields {
+          slug
+        }
+        frontmatter {
+          title
+          date(formatString: "MM/DD/YYYY")
+          categories
+        }
+        excerpt(pruneLength: 200)
+        timeToRead
+      }
+    }
+  }
+`
