@@ -204,9 +204,7 @@ const Layout = ({ children, customSEO }) => {
         <GlobalStyle />
         {children}
         <Footer>
-          &copy; 2019 by Yannis Spyrou. All rights reserved. <br />
-          <a href="https://github.com/Iannes/yannis-spyrou-blog">GitHub Repository</a> <br />
-          <span>Last build: {buildTime}</span>
+          &copy; {new Date().getFullYear() || 2019} by Yannis Spyrou. All rights reserved. <br />          
         </Footer>
       </>
     </ThemeProvider>
