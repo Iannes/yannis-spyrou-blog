@@ -1,5 +1,7 @@
 # Yannis Spyrou - Gatsby Blog
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/cc477c47-d6e4-4ea5-a61a-549fbb0ffae5/deploy-status)](https://app.netlify.com/sites/serene-gates-62c875/deploys)
+
 Typography driven, focus on the content & minimal style. Powered by MDX.
 
 ## Features
