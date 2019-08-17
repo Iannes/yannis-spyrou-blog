@@ -52,6 +52,7 @@ const IndexPage = ({
         <h2>Hi I&apos;m Yannis.</h2>
         <p>
         I&apos;m a frontend developer, working with TypeScript / React &amp; AWS Serverless.
+        You can read more about my experience <Link to="about">here</Link>.
         </p>
         <Link to="/contact">
           <Button big>
@@ -64,6 +65,7 @@ const IndexPage = ({
       </Hero>
       <Content>
         <SectionTitle>Latest stories</SectionTitle>
+        
         {posts.map(post => (
           <Article
             title={post.frontmatter.title}
