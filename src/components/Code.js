@@ -11,13 +11,13 @@ import styled from 'styled-components'
 const StyledEditor = styled(LiveEditor)`
   background: ${theme.plain.backgroundColor};
   border-radius: 5px;
-  margin-bottom: 1rem;  
+  margin-bottom: 1rem;    
 `
 
 const Code = ({ codeString, language, ...props }) => {
   if (props['react-live']) {
     return (
-      <LiveProvider styles={"lineHeight: 26px;"} code={codeString} noInline={true} theme={theme}>
+      <LiveProvider code={codeString} noInline={true} theme={theme}>
         <StyledEditor />
         <LiveError />
         <LivePreview />

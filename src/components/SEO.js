@@ -45,7 +45,7 @@ const SEO = props => {
       '@type': 'Person',
       name: config.author,
     },
-    copyrightYear: '2018',
+    copyrightYear: '2019',
     creator: {
       '@type': 'Person',
       name: config.author,
@@ -148,7 +148,7 @@ const SEO = props => {
       <title>{title}</title>
       <meta name="description" content={description} />
       <meta name="image" content={image} />
-      <meta name="gatsby-starter" content="Gatsby Starter Minimal Blog" />
+      <meta name="gatsby-starter" content="Yannis Spyrou | Frontend developer" />
       <meta property="og:locale" content={config.ogLanguage} />
       <meta property="og:site_name" content={config.ogSiteName ? config.ogSiteName : ''} />
       <meta property="og:url" content={URL} />
