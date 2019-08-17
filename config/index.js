@@ -2,7 +2,7 @@ module.exports = {
   pathPrefix: '/', // Prefix for all links. If you deploy your site to example.com/portfolio your pathPrefix should be "portfolio"
 
   siteTitle: 'Yannis Spyrou', // Navigation and Site Title
-  siteTitleAlt: 'Yannis Spyrou Blog', // Alternative Site title for SEO
+  siteTitleAlt: 'Yannis Spyrou | Frontend Developer', // Alternative Site title for SEO
   siteTitleManifest: 'Yannis Spyrou',
   siteUrl: 'https://www.yannisspyrou.com', // Domain of your site. No trailing slash!
   siteLanguage: 'en', // Language Tag on <html> element
@@ -15,7 +15,7 @@ module.exports = {
 
   // siteFBAppID: '123456789', // Facebook App ID - Optional
   userTwitter: '@SpyrouYannis', // Twitter Username - Optional
-  ogSiteName: 'iannes', // Facebook Site Name - Optional
+  ogSiteName: 'Yannis Spyrou', // Facebook Site Name - Optional
   ogLanguage: 'en_US', // Facebook Language
   // googleAnalyticsID: 'UA-47519312-6',
 
