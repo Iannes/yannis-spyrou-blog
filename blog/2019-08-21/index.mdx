@@ -1,0 +1,128 @@
+---
+date: "2019-08-21"
+title: "Querying data from the AppSync API using React Hooks."
+categories:
+  - Serverless
+  - React
+  - GraphQL
+---
+
+![](./fabio-unsplash.jpg)
+
+Photo by [fabio](https://unsplash.com/@fabioha?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on Unsplash
+
+In this post we will learn how to install how to query data from the AppSync API using React Hooks.
+
+### Apollo Client
+
+Apollo client is a great tool that helps us build client 
+applications using a GraphQL API. We will be interacting with AppSync using React Apollo Hooks.
+
+We are going to be using a simple example for learning purposes. 
+We can use the a simple Todo App to demonstarte how Apollo Hooks work, 
+but before we do anything we have to set this up.
+
+Firstly we need to install our dependencies.
+
+```shell
+$ yarn add apollo-react-hooks || npm install apollo-react-hooks --save
+```
+
+Now we need to wrap App.js with the Apollo Hooks Provider.
+
+```js
+// src/App.js
+import { withAuthenticator } from 'aws-amplify-react';
+// Add the following lines to your App.js imports
+import { Rehydrated } from 'aws-appsync-react';
+import { ApolloProvider } from 'react-apollo';
+import { ApolloProvider as ApolloHooksProvider} from 'react-apollo-hooks';
+import ListTodos from './ListTodos'
+import Amplify from 'aws-amplify';
+import config from 'aws-exports';
+
+Amplify.configure(config);
+
+function App() {
+  return (
+    <div className="App">
+        <ListTodos />
+    </div>
+  );
+}
+
+const WithProviders = () => (
+  <ApolloProvider client={client}>
+    <ApolloHooksProvider client={client}>
+      <Rehydrated>
+        <App />
+      <Rehydrated />
+    <ApolloHooksProvider />
+  <ApolloProvider />
+);
+
+export default withAuthenticator(WithProviders, true);
+
+```
+
+#### Queries
+
+As you can see in the `App.js` file there is a new import apart from the Apollo Hooks.
+This is the `ListTodos` component, which is responsible 
+for querying and listing our list of todos.
+
+```js
+import React from "react";
+import gql from "graphql-tag";
+import { useQuery } from "react-apollo-hooks";
+import Todo from "./Todo";
+
+const LIST_TODOS = gql`
+  query LIST_TODOS {
+    listTodos {
+      items {
+        id
+        name
+        description
+      }
+    }
+  }
+`;
+
+const ListTodos = () => {
+
+  const { data, error, loading } = useQuery(LIST_TODOS);
+
+  if (error) return "Error!"; // You probably want to do more here!
+
+  if (loading) return "loading..."; // You can also show a spinner here.
+
+  return (
+
+    <ul>
+      {listTodos &&
+        listTodos.items.map(todo => {
+          return (
+            <Todo 
+              key={todo.id} 
+              name={todo.name} 
+              desc={todo.description}
+            />
+          );
+        })}
+    </ul>
+    
+  );
+};
+
+export default ListTodos;
+
+```
+
+And that's all it takes to query data from our AppSync API using Apollo Hooks!
+
+Stay tuned for the next part of this series that will take you through mutating data using [React Hooks](https://reactjs.org/docs/hooks-intro.html).
+
+Do you think something is missing from this article ?
+
+Let me know on [Twitter](https://twitter.com/SpyrouYannis).
