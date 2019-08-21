@@ -1,5 +1,4 @@
 import React from 'react'
-import Subline from './Subline'
 
 const styles = {
     h1: {

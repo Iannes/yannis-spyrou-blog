@@ -184,6 +184,18 @@ const GlobalStyle = createGlobalStyle`
   [hidden] {
     display: none !important;
   }
+  [data-white-bg] {
+    background: white;    
+    height: 100vh;    
+  }
+  [data-dark-bg] {
+    background: #4b4b4b;    
+    height: 100vh;    
+  }
+  [data-light-bg] {
+    background: #e9e1fb;    
+    height: 100vh;    
+  }
 `
 
 const Footer = styled.footer`
