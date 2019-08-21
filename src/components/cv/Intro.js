@@ -1,28 +1,40 @@
 import React from 'react'
+import styled from 'styled-components'
+
+const Container = styled.article`
+        width: 80%;
+        margin: auto;
+        line-height: 32px;
+        @media (max-width: 767px) {
+            width: 90%;
+            line-height: 28px;
+        }
+`
+
 
 const styles = {
-    intro: {
-        width: '50%',
-        margin: 'auto',
-        lineHeight: '32px',
-    },
     heading: {
         padding: 0,
         margin: '0 0 2rem',
-
+        color: 'white',
+    },
+    bodyText: {        
+        margin: 'auto',
+        lineheight: '32px',
+        fontSize: '23px',
+        fontWeight: 100,
     }
 }
 
 const Intro = () => {                
     return (
-        <section style={styles.intro}>
-        <h1  style={styles.heading}>Welcome</h1>
-        <p>
+        <Container>
+        <h1 style={styles.heading}>Welcome</h1>
+        <p style={styles.bodyText}>
             I am a front end developer, experienced with all development cycle stages on several 
-            web projects. Well-versed in HTML5, CSS3 and JavaScript ( ES2015+ ) and currently 
-            working with React / TypeScript and AWS Serverless technologies.Please check my <a href="https://github.com/iannes"> Github profile </a> for a few examples of my work
+            web projects. Currently working with React / TypeScript and AWS Serverless technologies.            
         </p>
-        </section>
+        </Container>
     )          
 }
 
