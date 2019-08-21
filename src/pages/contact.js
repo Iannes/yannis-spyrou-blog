@@ -6,6 +6,7 @@ import { Link } from 'gatsby'
 import styled from 'styled-components'
 import { Layout, Wrapper, Header, Button } from '../components'
 
+
 import config from '../../config'
 
 const Content = styled.article`

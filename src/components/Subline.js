@@ -8,7 +8,7 @@ const Subline = styled.article`
   ${props => props.sectionTitle && 'text-align: center'};
   ${props => props.date && 'margin-bottom: -15px'};
   ${props => props.date && 'line-height: -10px'};
-  ${props => props.date && 'padding: 10px 0 0'};
+  ${props => props.date && 'padding: 10px 0 15px'};
 `
 
 export default Subline
