@@ -25,10 +25,19 @@ const styles = {
   },
 };
 
-const CVSection = ({ heading = '', text = '' }) => (
+const ListDuties = ({ duties = [] }) => (
+  <ul>
+    {duties.map(item => (
+      <li key={item}>{item}</li>
+    ))}
+  </ul>
+);
+
+const CVSection = ({ heading = '', text = '', duties = '' }) => (
   <Container>
     {heading && <h1 style={styles.heading}>{heading}</h1>}
     {text && <p style={styles.bodyText}>{text}</p>}
+    {duties && <ListDuties duties={duties} />}
   </Container>
 );
 

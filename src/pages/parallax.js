@@ -84,8 +84,24 @@ class Test extends React.Component {
               <Cloud styles={styles.cloud75} />
             </ParallaxLayer>
 
-            <ParallaxLayer offset={2} speed={-0.3}>
+            <ParallaxLayer offset={2.5} speed={-0.3}>
               <Clients styles={styles.section} />
+            </ParallaxLayer>
+
+            <ParallaxLayer offset={1.4} speed={0.3}>
+              <CVSection
+                heading={copy.experience.immediate.companyName}
+                text={copy.experience.immediate.description}
+                duties={copy.experience.immediate.duties}
+              />
+            </ParallaxLayer>
+            <ParallaxLayer
+              offset={0.6}
+              speed={0.1}
+              onClick={() => this.parallax.scrollTo(2)}
+              style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}
+            >
+              <CVSection heading={copy.experience.heading} />
             </ParallaxLayer>
 
             <ParallaxLayer
@@ -94,19 +110,10 @@ class Test extends React.Component {
               onClick={() => this.parallax.scrollTo(1)}
               style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}
             >
-              <OrangeTriangle />
               <FloatingSVG />
               <CVSection heading={copy.welcome.heading} text={copy.welcome.bodyText} />
             </ParallaxLayer>
 
-            <ParallaxLayer
-              offset={1}
-              speed={0.1}
-              onClick={() => this.parallax.scrollTo(2)}
-              style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}
-            >
-              <CVSection heading={copy.experience.heading} />
-            </ParallaxLayer>
             <ParallaxLayer
               offset={1}
               speed={0.1}
