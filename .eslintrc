@@ -12,9 +12,12 @@
   "env": {
     "browser": true,
     "node": true,
-    "jquery": true
+    "jquery": true,
+    "jest": true
   },
   "rules": {
+    "react/prop-types": 0,
+    "no-return-assign": 0,
     "no-unused-vars": [
       1,
       {
@@ -29,7 +32,8 @@
       }
     ],
     "no-unused-expressions": [
-      1, {
+      1,
+      {
         "allowTaggedTemplates": true
       }
     ],
@@ -52,6 +56,7 @@
     "jsx-a11y/accessible-emoji": 0,
     "react/jsx-props-no-spreading": 0,
     "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "warn",
     "react/jsx-filename-extension": [
       1,
       {
@@ -66,21 +71,13 @@
         "allowTemplateLiterals": true
       }
     ],
-    "indent": ["error", 2, {"SwitchCase": 1}],
+    "indent": ["error", 2, { "SwitchCase": 1 }],
     "prettier/prettier": [
       "error",
       {
         "trailingComma": "es5",
-        "semi": false,
         "singleQuote": true,
-        "printWidth": 120
-      }
-    ],
-    "jsx-a11y/href-no-hash": "off",
-    "jsx-a11y/anchor-is-valid": [
-      "warn",
-      {
-        "aspects": ["invalidHref"]
+        "printWidth": 100
       }
     ]
   },
