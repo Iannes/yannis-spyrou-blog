@@ -35,7 +35,8 @@ const ListContainer = styled.ul`
     }
     @media (max-width: 680px) {
       transform: scale(1);
-      padding: 60px 20px;      
+      padding: 60px 20px;    
+      margin-top: 60px;  
     }
 }`;
 
@@ -49,23 +50,28 @@ const ListItem = styled.li`
       line-height: 32px;
     }
 }`;
+const BodyText = styled.p`
+    margin: auto;
+    font-size: 23px;
+    font-weight: 100;
+    line-height: 32px;
+    @media (max-width: 680px) {
+      font-size: 18px;
+      line-height: 30px;
+    }
+}`;
 
 const styles = {
   heading: {
     padding: 0,
     margin: '0 0 2rem',
     color: '#eee',
+    width: '100%',
   },
   headingColor: {
     padding: 0,
     margin: '0 0 2rem',
     color: '#d02e77',
-  },
-  bodyText: {
-    margin: 'auto',
-    lineheight: '32px',
-    fontSize: '23px',
-    fontWeight: 100,
   },
   flex: {
     display: 'flex',
@@ -94,7 +100,7 @@ const CVSection = ({ heading = '', text = '', tech = '', link = '', headingColor
         )}
       </h1>
     )}
-    {text && <p style={styles.bodyText}>{text}</p>}
+    {text && <BodyText>{text}</BodyText>}
     <section style={styles.flex}>
       {tech && <List heading="Technologies Used:" data={tech} />}
     </section>

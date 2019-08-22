@@ -45,7 +45,7 @@ class Test extends React.Component {
                 link={copy.experience.immediate.companyWebsiteLink}
               />
             </ParallaxLayer>
-            <ParallaxLayer offset={3} speed={0.4}>
+            <ParallaxLayer offset={3.4} speed={0.4}>
               <CVSection
                 heading={copy.experience.ckd.companyName}
                 text={copy.experience.ckd.description}
@@ -54,7 +54,7 @@ class Test extends React.Component {
                 link={copy.experience.ckd.companyWebsiteLink}
               />
             </ParallaxLayer>
-            <ParallaxLayer offset={4} speed={0.6}>
+            <ParallaxLayer offset={4.7} speed={0.6}>
               <CVSection
                 heading={copy.experience.discover.companyName}
                 text={copy.experience.discover.description}
