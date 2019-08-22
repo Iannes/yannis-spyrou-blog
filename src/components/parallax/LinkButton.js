@@ -3,7 +3,7 @@ import { Link } from 'gatsby';
 import { ParallaxLayer } from 'react-spring/renderprops-addons';
 import { Button } from '..';
 
-const ContactButton = ({ buttonText = '', linkText = '' }) => (
+const LinkButton = ({ buttonText = '', linkText = '' }) => (
   <ParallaxLayer
     offset={5.3}
     speed={0.3}
@@ -20,4 +20,4 @@ const ContactButton = ({ buttonText = '', linkText = '' }) => (
   </ParallaxLayer>
 );
 
-export default ContactButton;
+export default LinkButton;

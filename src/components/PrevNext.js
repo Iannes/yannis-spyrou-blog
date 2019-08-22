@@ -1,7 +1,7 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import styled from 'styled-components'
-import { Link } from 'gatsby'
+import React from 'react';
+import PropTypes from 'prop-types';
+import styled from 'styled-components';
+import { Link } from 'gatsby';
 
 const Wrapper = styled.section`
   display: flex;
@@ -12,7 +12,7 @@ const Wrapper = styled.section`
     align-items: center;
   }
   justify-items: center;
-`
+`;
 
 const Prev = styled.article`
   span {
@@ -20,7 +20,7 @@ const Prev = styled.article`
     font-size: 0.8rem;
     color: ${props => props.theme.colors.grey.light};
   }
-`
+`;
 
 const Next = styled.article`
   margin-left: auto;
@@ -30,7 +30,7 @@ const Next = styled.article`
     font-size: 0.8rem;
     color: ${props => props.theme.colors.grey.light};
   }
-`
+`;
 
 const PrevNext = ({ next, prev }) => (
   <Wrapper>
@@ -48,16 +48,16 @@ const PrevNext = ({ next, prev }) => (
       </Next>
     )}
   </Wrapper>
-)
+);
 
-export default PrevNext
+export default PrevNext;
 
 PrevNext.propTypes = {
   next: PropTypes.object,
   prev: PropTypes.object,
-}
+};
 
 PrevNext.defaultProps = {
   next: null,
   prev: null,
-}
+};

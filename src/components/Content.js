@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from 'styled-components';
 
 export const Content = styled.article`
   grid-column: 2;
@@ -14,4 +14,4 @@ export const Content = styled.article`
   @media (max-width: ${props => props.theme.breakpoints.phone}) {
     padding: 2rem 1.5rem;
   }
-`
+`;

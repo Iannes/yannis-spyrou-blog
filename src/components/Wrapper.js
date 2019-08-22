@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from 'styled-components';
 
 const Wrapper = styled.section`
   display: grid;
@@ -7,6 +7,6 @@ const Wrapper = styled.section`
   @media (max-width: 767px) {
     padding: 0;
   }
-`
+`;
 
-export default Wrapper
+export default Wrapper;

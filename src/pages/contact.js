@@ -1,13 +1,12 @@
 /* eslint jsx-a11y/label-has-for:0 */
 
-import React from 'react'
-import Helmet from 'react-helmet'
-import { Link } from 'gatsby'
-import styled from 'styled-components'
-import { Layout, Wrapper, Header, Button } from '../components'
+import React from 'react';
+import Helmet from 'react-helmet';
+import { Link } from 'gatsby';
+import styled from 'styled-components';
+import { Layout, Wrapper, Header, Button } from '../components';
 
-
-import config from '../../config'
+import config from '../../config';
 
 const Content = styled.article`
   grid-column: 2;
@@ -44,7 +43,7 @@ const Content = styled.article`
       }
     }
   }
-`
+`;
 
 const Contact = () => (
   <Layout>
@@ -55,8 +54,17 @@ const Contact = () => (
       </Header>
       <Content>
         <h1>Contact</h1>
-        <p>Have a question, or want to collaborate on your next cool project? Fill in the form below and let me know!</p>
-        <form name="contact-form" method="post" data-netlify="true" data-netlify-honeypot="bot-field" action="/success">
+        <p>
+          Have a question, or want to collaborate on your next cool project? Fill in the form below
+          and let me know!
+        </p>
+        <form
+          name="contact-form"
+          method="post"
+          data-netlify="true"
+          data-netlify-honeypot="bot-field"
+          action="/success"
+        >
           <p>
             <label htmlFor="contact-name">
               Name
@@ -81,6 +89,6 @@ const Contact = () => (
       </Content>
     </Wrapper>
   </Layout>
-)
+);
 
-export default Contact
+export default Contact;

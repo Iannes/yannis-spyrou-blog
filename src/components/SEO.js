@@ -1,27 +1,27 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import Helmet from 'react-helmet'
+import React from 'react';
+import PropTypes from 'prop-types';
+import Helmet from 'react-helmet';
 
-import config from '../../config'
+import config from '../../config';
 
 const SEO = props => {
-  const { postNode, postPath, article, buildTime } = props
+  const { postNode, postPath, article, buildTime } = props;
 
-  let title
-  let description
+  let title;
+  let description;
 
-  const realPrefix = config.pathPrefix === '/' ? '' : config.pathPrefix
-  const homeURL = `${config.siteUrl}${realPrefix}`
-  const URL = `${homeURL}${postPath || ''}`
-  const image = `${homeURL}${config.siteBanner}`
+  const realPrefix = config.pathPrefix === '/' ? '' : config.pathPrefix;
+  const homeURL = `${config.siteUrl}${realPrefix}`;
+  const URL = `${homeURL}${postPath || ''}`;
+  const image = `${homeURL}${config.siteBanner}`;
 
   if (article) {
-    const postMeta = postNode.frontmatter
-    title = `${postMeta.title} | ${config.siteTitle}`
-    description = postNode.excerpt
+    const postMeta = postNode.frontmatter;
+    title = `${postMeta.title} | ${config.siteTitle}`;
+    description = postNode.excerpt;
   } else {
-    title = config.siteTitleAlt
-    description = config.siteDescription
+    title = config.siteTitleAlt;
+    description = config.siteDescription;
   }
 
   // schema.org in JSONLD format
@@ -60,7 +60,7 @@ const SEO = props => {
       '@type': 'ImageObject',
       url: image,
     },
-  }
+  };
 
   // Initial breadcrumb list
 
@@ -81,9 +81,9 @@ const SEO = props => {
       },
       position: 2,
     },
-  ]
+  ];
 
-  let schemaArticle = null
+  let schemaArticle = null;
 
   if (article) {
     schemaArticle = {
@@ -122,7 +122,7 @@ const SEO = props => {
         url: image,
       },
       mainEntityOfPage: URL,
-    }
+    };
     // Push current blogpost into breadcrumb list
     itemListElement.push({
       '@type': 'ListItem',
@@ -131,7 +131,7 @@ const SEO = props => {
         name: title,
       },
       position: 3,
-    })
+    });
   }
 
   const breadcrumb = {
@@ -140,7 +140,7 @@ const SEO = props => {
     description: 'Breadcrumbs list',
     name: 'Breadcrumbs',
     itemListElement,
-  }
+  };
 
   return (
     <Helmet>
@@ -170,21 +170,21 @@ const SEO = props => {
       {article && <script type="application/ld+json">{JSON.stringify(schemaArticle)}</script>}
       <script type="application/ld+json">{JSON.stringify(breadcrumb)}</script>
     </Helmet>
-  )
-}
+  );
+};
 
-export default SEO
+export default SEO;
 
 SEO.propTypes = {
   postNode: PropTypes.object,
   postPath: PropTypes.string,
   article: PropTypes.bool,
   buildTime: PropTypes.string,
-}
+};
 
 SEO.defaultProps = {
   postNode: null,
   postPath: null,
   article: false,
   buildTime: null,
-}
+};

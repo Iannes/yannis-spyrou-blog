@@ -1,13 +1,13 @@
 /* eslint jsx-a11y/label-has-for:0 */
-import React from 'react'
-import PropTypes from 'prop-types'
-import Helmet from 'react-helmet'
-import { Link, graphql } from 'gatsby'
-import styled from 'styled-components'
+import React from 'react';
+import PropTypes from 'prop-types';
+import Helmet from 'react-helmet';
+import { Link, graphql } from 'gatsby';
+import styled from 'styled-components';
 
-import { Layout, Article, Wrapper, SectionTitle, Header } from '../components'
+import { Layout, Article, Wrapper, SectionTitle, Header } from '../components';
 
-import config from '../../config'
+import config from '../../config';
 
 const Content = styled.article`
   grid-column: 2;
@@ -21,7 +21,7 @@ const Content = styled.article`
     padding: 2rem 1.5rem;
   }
   overflow: hidden;
-`
+`;
 
 const Hero = styled.article`
   grid-column: 2;
@@ -43,13 +43,13 @@ const Hero = styled.article`
       font-size: 1.25rem;
     }
   }
-`
+`;
 
 const BlogPage = ({
-    data: {
-      allMdx: { nodes: posts },
-    },
-  }) => (
+  data: {
+    allMdx: { nodes: posts },
+  },
+}) => (
   <Layout>
     <Wrapper>
       <Helmet title={`Blog | ${config.siteTitle}`} />
@@ -58,40 +58,37 @@ const BlogPage = ({
       </Header>
       <Hero>
         <h2>Welcome.</h2>
-        <p>
-        I&apos;m a frontend developer, working with TypeScript / React &amp; AWS Serverless.
-        </p>
+        <p>I&apos;m a frontend developer, working with TypeScript / React &amp; AWS Serverless.</p>
       </Hero>
       <Content>
         <SectionTitle>Latest stories</SectionTitle>
-            {posts.map(post => (
-            <Article
-                title={post.frontmatter.title}
-                date={post.frontmatter.date}
-                excerpt={post.excerpt}
-                timeToRead={post.timeToRead}
-                slug={post.fields.slug}
-                categories={post.frontmatter.categories}
-                key={post.fields.slug}
-            />
-            ))}              
+        {posts.map(post => (
+          <Article
+            title={post.frontmatter.title}
+            date={post.frontmatter.date}
+            excerpt={post.excerpt}
+            timeToRead={post.timeToRead}
+            slug={post.fields.slug}
+            categories={post.frontmatter.categories}
+            key={post.fields.slug}
+          />
+        ))}
       </Content>
     </Wrapper>
   </Layout>
-)
+);
 
-export default BlogPage
+export default BlogPage;
 
 BlogPage.propTypes = {
-    data: PropTypes.shape({
-      allMdx: PropTypes.shape({
-        nodes: PropTypes.array.isRequired,
-      }),
-    }).isRequired,
-  }
+  data: PropTypes.shape({
+    allMdx: PropTypes.shape({
+      nodes: PropTypes.array.isRequired,
+    }),
+  }).isRequired,
+};
 
-
-  export const BlogQuery = graphql`
+export const BlogQuery = graphql`
   query BlogQuery {
     allMdx(sort: { fields: [frontmatter___date], order: DESC }) {
       nodes {
@@ -108,4 +105,4 @@ BlogPage.propTypes = {
       }
     }
   }
-`
+`;
