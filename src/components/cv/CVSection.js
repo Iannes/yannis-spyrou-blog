@@ -7,28 +7,15 @@ const Container = styled.article`
   line-height: 32px;
   @media (max-width: 767px) {
     width: 90%;
-    line-height: 28px;
-  }
-`;
-const FullWidth = styled.article`
-  width: 100%;
-  margin: auto;
-  line-height: 32px;
-  @media (max-width: 767px) {
-    width: 90%;
-    line-height: 28px;
+    line-height: 35px;
   }
 `;
 
 const ListContainer = styled.ul`
     padding: 90px 30px;
     background: #182440;
-    /* background: #141821; */
-    /* background: rgb(238, 238, 238); */    
     border-radius: 10px;
-    position: relative;
-    flex: 1 1 50%;
-    perspective: unset;
+    position: relative;      
     transform: scale(0.7);
     &::before {
         content: '🔴 "  ⚪ "  🔵 ';
@@ -45,6 +32,21 @@ const ListContainer = styled.ul`
     left: 0;
     top: 0;
     background: #d8d8d8;
+    }
+    @media (max-width: 680px) {
+      transform: scale(1);
+      padding: 60px 20px;      
+    }
+}`;
+
+const ListItem = styled.li`
+    color: rgb(238, 238, 238);
+    font-size: 25px;
+    line-height: 45px;
+    list-style: none;
+    @media (max-width: 680px) {
+      font-size: 18px;
+      line-height: 32px;
     }
 }`;
 
@@ -65,12 +67,6 @@ const styles = {
     fontSize: '23px',
     fontWeight: 100,
   },
-  listItem: {
-    color: '#eee',
-    fontSize: '25px',
-    lineHeight: '45px',
-    listStyle: 'none',
-  },
   flex: {
     display: 'flex',
   },
@@ -80,9 +76,7 @@ const List = ({ data = [], heading = '' }) => (
   <ListContainer>
     <h4 style={styles.headingColor}>{heading && heading}</h4>
     {data.map(item => (
-      <li style={styles.listItem} key={item}>
-        {item}
-      </li>
+      <ListItem key={item}>{item}</ListItem>
     ))}
   </ListContainer>
 );
