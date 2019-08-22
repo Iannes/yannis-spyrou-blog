@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 const Container = styled.article`
-  width: 70%;
+  width: 75%;
   margin: auto;
   line-height: 32px;
   @media (max-width: 767px) {
@@ -10,6 +10,43 @@ const Container = styled.article`
     line-height: 28px;
   }
 `;
+const FullWidth = styled.article`
+  width: 100%;
+  margin: auto;
+  line-height: 32px;
+  @media (max-width: 767px) {
+    width: 90%;
+    line-height: 28px;
+  }
+`;
+
+const ListContainer = styled.ul`
+    padding: 90px 30px;
+    background: #182440;
+    /* background: #141821; */
+    /* background: rgb(238, 238, 238); */    
+    border-radius: 10px;
+    position: relative;
+    flex: 1 1 50%;
+    perspective: unset;
+    transform: scale(0.7);
+    &::before {
+        content: '🔴 "  ⚪ "  🔵 ';
+        position: absolute;        
+        top: .5rem;
+        z-index: 2;
+        color: #d8d8d8;
+    }
+    &::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 50px;
+    left: 0;
+    top: 0;
+    background: #d8d8d8;
+    }
+}`;
 
 const styles = {
   heading: {
@@ -29,29 +66,35 @@ const styles = {
     fontWeight: 100,
   },
   listItem: {
-    fontWeight: '100',
     color: '#eee',
-    fontSize: '20px',
-    lineHeight: '39px',
-    letterSpacing: '1px',
+    fontSize: '25px',
+    lineHeight: '45px',
+    listStyle: 'none',
+  },
+  flex: {
+    display: 'flex',
   },
 };
 
-const ListDuties = ({ duties = [] }) => (
-  <ul>
-    {duties.map(item => (
+const List = ({ data = [], heading = '' }) => (
+  <ListContainer>
+    <h4 style={styles.headingColor}>{heading && heading}</h4>
+    {data.map(item => (
       <li style={styles.listItem} key={item}>
         {item}
       </li>
     ))}
-  </ul>
+  </ListContainer>
 );
 
-const CVSection = ({ heading = '', text = '', duties = '', headingColor = false }) => (
+const CVSection = ({ heading = '', text = '', duties = '', tech = '', headingColor = false }) => (
   <Container>
     {heading && <h1 style={headingColor ? styles.headingColor : styles.heading}>{heading}</h1>}
     {text && <p style={styles.bodyText}>{text}</p>}
-    {duties && <ListDuties duties={duties} />}
+    <section style={styles.flex}>
+      {/* {duties && <List heading="Duties:" data={duties} />} */}
+      {tech && <List heading="Technologies Used:" data={tech} />}
+    </section>
   </Container>
 );
 

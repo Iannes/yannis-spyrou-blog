@@ -10,26 +10,26 @@ export default {
       companyName: 'Immediate Media Co',
       companyWebsiteLink: 'http://www.immediate.co.uk',
       title: 'Front End Developer',
-      description:
-        'Work in a self-organising, cross-functional team, developing features for web/mobile applications that are used by thousands of users daily. Actively participating in the decision-making process of the product and defining its future architecture and technology stack.',
+      description: `Building serverless applications using React TypeScript and AWS. Make suggestions on how modern tech can 
+      solve existing and / or potential problems. Actively participating in the decision-making process 
+      of the product and defining its future architecture and technology stack.`,
       duties: [
         'Collaborating with remote teams and share common React component libraries in TypeScript',
         'Make suggestions on how modern tech can solve existing and / or potential problems',
         'Prototyping proof-of-concept apps using React, GraphQL, Apollo client and serverless AWS',
         'Building serverless MVP apps with AWS Amplify, GraphQL and Appsync',
-        'Collaborate with backnd engineers on various architecture discussions',
+        'Collaborate with backend engineers on various architecture discussions',
         'Unit and integration testing',
       ],
       tech: [
-        'React, Typescript / ES6+, Next',
-        'CSS-in-JS, Babel, Webpack',
-        'Jest, Enzyme',
-        'Storybook, Storyshots',
-        'GraphQL, Apollo Client',
-        'AWS Appsync, AWS Amplify, DynamoDB, CloudFormation',
-        'Command Line Tools',
-        'JIRA',
+        'React, Typescript / ES6+, Next, GraphQL, Apollo Client',
+        'Jest, Enzyme, Storybook, Storyshots, CSS-in-JS',
+        'AWS Appsync & Amplify, DynamoDB, CloudFormation, S3',
+        'Git, Babel, Webpack, Command Line Tools',
       ],
+      test: {
+        icons: [`🔴`, `😌`, `💩`, `🍿`],
+      },
     },
     ckd: {
       companyName: 'Carr Kamasa Design',

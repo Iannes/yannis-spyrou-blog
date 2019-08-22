@@ -14,11 +14,11 @@ const styles = {
 
 const Windows = ({ onClick }) => (
   <>
-    <ParallaxLayer offset={2.5} speed={-0.3}>
+    <ParallaxLayer offset={3.5} speed={-0.3}>
       <Clients styles={styles.section} />
     </ParallaxLayer>
     <ParallaxLayer
-      offset={2}
+      offset={3}
       speed={-0}
       style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}
       onClick={onClick}
