@@ -4,6 +4,7 @@ import { Layout } from '../components';
 import { FloatingSVG } from '../components/floatingSVG/floatingSVG';
 import { ClientMain } from '../components/floatingSVG/ClientMain';
 import { Clients } from '../components/floatingSVG/Clients';
+import Windows from '../components/parallax/Windows';
 import CVSection from '../components/cv/CVSection';
 import Clouds from '../components/parallax/Clouds';
 import copy from '../copy';
@@ -38,10 +39,6 @@ class Test extends React.Component {
             <ParallaxLayer offset={1} speed={1} style={styles.test} />
             <ParallaxLayer offset={2} speed={1} style={{ backgroundColor: '#87BCDE' }} />
             <Clouds />
-            <ParallaxLayer offset={2.5} speed={-0.3}>
-              <Clients styles={styles.section} />
-            </ParallaxLayer>
-
             <ParallaxLayer offset={1.6} speed={0.2}>
               <CVSection
                 heading={copy.experience.immediate.companyName}
@@ -75,15 +72,7 @@ class Test extends React.Component {
             >
               <FloatingSVG />
             </ParallaxLayer>
-
-            <ParallaxLayer
-              offset={2}
-              speed={-0}
-              style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}
-              onClick={() => this.parallax.scrollTo(0)}
-            >
-              <ClientMain styles={styles.clientMain} />
-            </ParallaxLayer>
+            <Windows onClick={() => this.parallax.scrollTo(0)} />
           </Parallax>
         </section>
       </Layout>
