@@ -8,7 +8,7 @@ const ExperienceHeading = () => (
   <>
     <ParallaxLayer
       offset={0.9}
-      speed={0.5}
+      speed={-0.2}
       style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}
     >
       <SpaceInvader />

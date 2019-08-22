@@ -2,7 +2,6 @@ import React from 'react';
 import { ParallaxLayer } from 'react-spring/renderprops-addons';
 import { ClientMain } from '../floatingSVG/ClientMain';
 import { Clients } from '../floatingSVG/Clients';
-import { Cloud } from '../floatingSVG/Cloud';
 
 const styles = {
   section: {
@@ -14,11 +13,11 @@ const styles = {
 
 const Windows = ({ onClick }) => (
   <>
-    <ParallaxLayer offset={3.5} speed={-0.3}>
+    <ParallaxLayer offset={4.5} speed={-0.3}>
       <Clients styles={styles.section} />
     </ParallaxLayer>
     <ParallaxLayer
-      offset={3}
+      offset={4}
       speed={-0}
       style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}
       onClick={onClick}
