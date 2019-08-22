@@ -66,11 +66,17 @@ class Test extends React.Component {
 
             <ParallaxLayer
               offset={0}
-              speed={0.8}
-              onClick={() => this.parallax.scrollTo(1)}
+              speed={-0.9}
               style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}
             >
               <FloatingSVG />
+            </ParallaxLayer>
+            <ParallaxLayer
+              offset={0}
+              speed={0.3}
+              onClick={() => this.parallax.scrollTo(1)}
+              style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}
+            >
               <CVSection heading={copy.welcome.heading} text={copy.welcome.bodyText} />
             </ParallaxLayer>
           </Parallax>
