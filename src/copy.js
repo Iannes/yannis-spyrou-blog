@@ -27,9 +27,6 @@ export default {
         'AWS Appsync & Amplify, DynamoDB, CloudFormation, S3',
         'Git, Babel, Webpack, Command Line Tools',
       ],
-      test: {
-        icons: [`🔴`, `😌`, `💩`, `🍿`],
-      },
     },
     ckd: {
       companyName: 'Carr Kamasa Design',
