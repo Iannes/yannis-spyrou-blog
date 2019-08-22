@@ -6,17 +6,18 @@
     border-radius: 2em;
     top: 10em;
     box-sizing: border-box;
-    border: 3.5em solid red;
+    border: 3.5em solid var(--primary);
     border-right-width: 7.5em;
     border-left-width: 7.5em;
     margin: 0 0 6rem 0;
+    opacity: var(--shapes-opacity);
 }
 
 .padlock:before {
     content: "";
     box-sizing: border-box;
     position: absolute;
-    border: 2.5em solid red;
+    border: 2.5em solid var(--primary);
     width: 14em;
     height: 12em;
     left: 50%;
@@ -30,7 +31,7 @@
     content: "";
     box-sizing: border-box;
     position: absolute;
-    border: 1em solid red;
+    border: 1em solid var(--primary);
     width: 5em;
     height: 8em;
     border-radius: 2.5em;

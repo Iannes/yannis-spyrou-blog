@@ -2,5 +2,6 @@
     width: 80px;
     height: 80px;
     border-radius: 50%;
-    box-shadow: 15px 15px 0 0 red;
+    box-shadow: 15px 15px 0 0 var(--primary);
+    opacity: var(--shapes-opacity);
 }

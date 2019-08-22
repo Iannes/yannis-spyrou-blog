@@ -16,6 +16,7 @@
         border-bottom: 29px solid var(--primary);
         border-left: 29px solid #eee;
         border-right: 29px solid #eee;
+        opacity: var(--shapes-opacity);
     }
 
     .octagon:after {
@@ -28,4 +29,5 @@
         border-top: 29px solid var(--primary);
         border-left: 29px solid #eee;
         border-right: 29px solid #eee;
+        opacity: var(--shapes-opacity);
     }

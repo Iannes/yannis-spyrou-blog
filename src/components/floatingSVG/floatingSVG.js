@@ -1,8 +1,10 @@
 import React from 'react';
-import { Triangle } from './TriangleSVG';
 import './floating.css';
 import './pacman.css';
 import './star.css';
+import './diamond.css';
+import './invader.css';
+import './padlock.css';
 
 export const FloatingSVG = () => (
   <section className="shapes float">
@@ -10,6 +12,7 @@ export const FloatingSVG = () => (
     <article className="circle" />
     <article className="pacman" />
     <article className="star" />
-    <Triangle />
+    <article className="diamond" />
+    <article className="cut-diamond" />
   </section>
 );

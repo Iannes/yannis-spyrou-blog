@@ -10,7 +10,7 @@
     border-left: 100px solid transparent;
     transform: rotate(35deg);
     opacity: .14;
-    left: 200px;
+    left: -400px;
     position: relative;
     z-index: 0;
 }

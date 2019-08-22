@@ -2,9 +2,12 @@
     width: 0;
     height: 0;
     border: 50px solid transparent;
-    border-bottom-color: red;
+    border-bottom-color: var(--primary);
     position: relative;
-    top: -50px;
+    top: -273px;
+    right: -900px;
+    z-index: 0;
+    opacity: var(--shapes-opacity);
 }
 
 .diamond:after {
@@ -15,7 +18,7 @@
     width: 0;
     height: 0;
     border: 50px solid transparent;
-    border-top-color: red;
+    border-top-color: var(--primary);
 }
 
 
@@ -23,9 +26,10 @@
     width: 0;
     height: 0;
     border: 50px solid transparent;
-    border-bottom: 20px solid red;
+    border-bottom: 20px solid var(--primary);
     position: relative;
     top: -50px;
+    opacity: var(--shapes-opacity);
 }
 
 .diamond-shield:after {
@@ -36,18 +40,20 @@
     width: 0;
     height: 0;
     border: 50px solid transparent;
-    border-top: 70px solid red;
+    border-top: 70px solid var(--primary);
+    opacity: var(--shapes-opacity);
 }
 
 .cut-diamond {
     border-style: solid;
-    border-color: transparent transparent red transparent;
+    border-color: transparent transparent var(--primary) transparent;
     border-width: 0 25px 25px 25px;
     height: 0;
     width: 50px;
     box-sizing: content-box;
     position: relative;
     margin: 20px 0 50px 0;
+    opacity: var(--shapes-opacity);
 }
 
 .cut-diamond:after {
@@ -58,6 +64,7 @@
     width: 0;
     height: 0;
     border-style: solid;
-    border-color: red transparent transparent transparent;
+    border-color: var(--primary) transparent transparent transparent;
     border-width: 70px 50px 0 50px;
+    opacity: var(--shapes-opacity);
 }

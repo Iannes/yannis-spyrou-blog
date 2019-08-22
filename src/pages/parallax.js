@@ -5,16 +5,14 @@ import { FloatingSVG } from '../components/floatingSVG/floatingSVG';
 import Windows from '../components/parallax/Windows';
 import ExperienceHeading from '../components/parallax/ExperienceHeading';
 import CVSection from '../components/cv/CVSection';
-import Clouds from '../components/parallax/Clouds';
 import copy from '../copy';
 
 const styles = {
-  test: {
+  deepSkyBlue: {
     position: 'absolute',
     width: '100%',
     height: '100%',
-    clipPath: 'polygon(0px 15%, 100% 25%, 100% 85%, 0px 75%)',
-    background: 'linear-gradient(to right, slateblue 0%, deepskyblue 100%)',
+    background: '#141821',
   },
   section: {
     display: 'flex',
@@ -35,24 +33,23 @@ class Test extends React.Component {
       <Layout>
         <section data-dark-bg>
           <Parallax ref={ref => (this.parallax = ref)} pages={4}>
-            <ParallaxLayer offset={1} speed={1} style={styles.test} />
-            <ParallaxLayer offset={2} speed={1} style={{ backgroundColor: '#87BCDE' }} />
-            <ParallaxLayer offset={3} speed={1} style={{ backgroundColor: '#fff' }} />
-            <Clouds />
-            <ParallaxLayer offset={1.6} speed={0.2}>
+            <ParallaxLayer offset={1} speed={1} style={styles.deepSkyBlue} />
+            <ParallaxLayer offset={2} speed={1} style={{ backgroundColor: '#141821' }} />
+            <ParallaxLayer offset={3} speed={1} style={{ backgroundColor: '#141821' }} />
+            <ParallaxLayer offset={1.7} speed={0.2}>
               <CVSection
                 heading={copy.experience.immediate.companyName}
                 text={copy.experience.immediate.description}
                 duties={copy.experience.immediate.duties}
                 tech={copy.experience.immediate.tech}
+                link={copy.experience.immediate.companyWebsiteLink}
               />
             </ParallaxLayer>
-
-            <ExperienceHeading onClick={() => this.parallax.scrollTo(2)} />
+            <ExperienceHeading />
 
             <ParallaxLayer
               offset={0}
-              speed={0.1}
+              speed={0.8}
               onClick={() => this.parallax.scrollTo(1)}
               style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}
             >
@@ -62,11 +59,9 @@ class Test extends React.Component {
 
             <ParallaxLayer
               offset={1}
-              speed={0.1}
+              speed={1}
               style={{ display: 'flex', alignItems: 'end', justifyContent: 'center' }}
-            >
-              <FloatingSVG />
-            </ParallaxLayer>
+            />
             <Windows onClick={() => this.parallax.scrollTo(0)} />
           </Parallax>
         </section>

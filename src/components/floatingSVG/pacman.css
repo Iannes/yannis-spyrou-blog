@@ -12,8 +12,8 @@
     border-top: 20px solid var(--primary);
     border-left: 20px solid var(--primary);
     border-bottom: 20px solid var(--primary);
+    opacity: var(--shapes-opacity);
     border-radius: 20px;
     position: relative;
     z-index: -10;
-    opacity: var(--shapes-opacity);
 }

@@ -87,9 +87,20 @@ const List = ({ data = [], heading = '' }) => (
   </ListContainer>
 );
 
-const CVSection = ({ heading = '', text = '', duties = '', tech = '', headingColor = false }) => (
+const CVSection = ({
+  heading = '',
+  text = '',
+  duties = '',
+  tech = '',
+  link = '',
+  headingColor = false,
+}) => (
   <Container>
-    {heading && <h1 style={headingColor ? styles.headingColor : styles.heading}>{heading}</h1>}
+    {heading && (
+      <h1 style={headingColor ? styles.headingColor : styles.heading}>
+        <a href={link}>{heading}</a>
+      </h1>
+    )}
     {text && <p style={styles.bodyText}>{text}</p>}
     <section style={styles.flex}>
       {/* {duties && <List heading="Duties:" data={duties} />} */}
