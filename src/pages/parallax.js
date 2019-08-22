@@ -1,6 +1,8 @@
 import React from 'react';
+import { Link } from 'gatsby';
 import { Parallax, ParallaxLayer } from 'react-spring/renderprops-addons';
-import { Layout } from '../components';
+import { Layout, Button } from '../components';
+import ContactButton from '../components/parallax/ContactButton';
 import { FloatingSVG } from '../components/floatingSVG/floatingSVG';
 import ExperienceHeading from '../components/parallax/ExperienceHeading';
 import CVSection from '../components/cv/CVSection';
@@ -31,7 +33,7 @@ class Test extends React.Component {
     return (
       <Layout>
         <section data-dark-bg>
-          <Parallax ref={ref => (this.parallax = ref)} pages={5}>
+          <Parallax ref={ref => (this.parallax = ref)} pages={6}>
             <ParallaxLayer offset={1} speed={1} style={styles.dark} />
             <ParallaxLayer offset={2} speed={1} style={{ backgroundColor: '#141821' }} />
             <ParallaxLayer offset={3} speed={1} style={{ backgroundColor: '#141821' }} />
@@ -79,6 +81,7 @@ class Test extends React.Component {
             >
               <CVSection heading={copy.welcome.heading} text={copy.welcome.bodyText} />
             </ParallaxLayer>
+            <ContactButton />
           </Parallax>
         </section>
       </Layout>
