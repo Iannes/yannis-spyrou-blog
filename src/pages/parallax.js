@@ -2,7 +2,6 @@ import React from 'react';
 import { Parallax, ParallaxLayer } from 'react-spring/renderprops-addons';
 import { FloatingSVG } from '../components/floatingSVG/floatingSVG';
 import { OrangeTriangle } from '../components/triangles/OrangeTriangle';
-import Intro from '../components/cv/Intro';
 import CVSection from '../components/cv/CVSection';
 import { Cloud } from '../components/floatingSVG/Cloud';
 import { ClientMain } from '../components/floatingSVG/ClientMain';
@@ -106,7 +105,7 @@ class Test extends React.Component {
               onClick={() => this.parallax.scrollTo(2)}
               style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}
             >
-              <Intro />
+              <CVSection heading={copy.experience.heading} />
             </ParallaxLayer>
             <ParallaxLayer
               offset={1}

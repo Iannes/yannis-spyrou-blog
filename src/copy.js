@@ -7,6 +7,8 @@ export default {
   experience: {
     heading: 'Work Experience',
     immediate: {
+      companyName: 'Immediate Media Co',
+      companyWebsiteLink: 'http://www.immediate.co.uk',
       title: 'Front End Developer',
       description:
         'Work in a self-organising, cross-functional team, developing features for web/mobile applications that are used by thousands of users daily. Actively participating in the decision-making process of the product and defining its future architecture and technology stack.',
@@ -30,6 +32,8 @@ export default {
       ],
     },
     ckd: {
+      companyName: 'Carr Kamasa Design',
+      companyWebsiteLink: 'https://www.carrkamasa.co.uk/',
       title: 'Web Developer',
       description:
         'Worked with listed companies, FTSE and AIM markets and charities as part of a small in-house development team. Handled projects all the way from conception to completion and undertook maintenance tasks in legacy sites.',
@@ -50,6 +54,8 @@ export default {
       ],
     },
     discover: {
+      companyName: 'Discover Brand Creation',
+      companyWebsiteLink: 'https://www.discoverbrandcreation.com/',
       title: 'Jr. Front end developer',
       description:
         "Worked as part of an agile cross-functional team, on a team-communication app. The client had their existing web-app rebuilt using NW.js. Our team's task was to translate the client’s designs into pixel perfect CSS and help the remote JavaScript team with testing.",
