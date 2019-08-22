@@ -25,14 +25,11 @@ const styles = {
   },
 };
 
-const Intro = () => (
+const CVSection = ({ heading = '', text = '' }) => (
   <Container>
-    <h1 style={styles.heading}>Welcome</h1>
-    <p style={styles.bodyText}>
-      I am a front end developer, experienced with all development cycle stages on several web
-      projects. Currently working with React / TypeScript and AWS Serverless technologies.
-    </p>
+    {heading && <h1 style={styles.heading}>{heading}</h1>}
+    {text && <p style={styles.bodyText}>{text}</p>}
   </Container>
 );
 
-export default Intro;
+export default CVSection;

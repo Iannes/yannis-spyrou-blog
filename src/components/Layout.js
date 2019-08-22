@@ -1,10 +1,10 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import styled, { ThemeProvider, createGlobalStyle } from 'styled-components'
+import React from 'react';
+import PropTypes from 'prop-types';
+import styled, { ThemeProvider, createGlobalStyle } from 'styled-components';
 
-import SEO from './SEO'
-import theme from '../../config/theme'
-import useBuildTime from '../hooks/useBuildTime'
+import SEO from './SEO';
+import theme from '../../config/theme';
+import useBuildTime from '../hooks/useBuildTime';
 
 const GlobalStyle = createGlobalStyle`
   *,
@@ -217,6 +217,13 @@ const GlobalStyle = createGlobalStyle`
     background-color: #2d3748;
     clip-path: polygon(0px 16%, 100% 4%, 100% 82%, 0px 94%);
   }
+  [data-diagonal-dark-short] {    
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #2d3748;
+    clip-path: polygon(0px 16%, 100% 4%, 100% 82%, 0px 94%);
+  }
   [data-diagonal-blue] {    
     position: absolute;
     width: 100%;
@@ -224,7 +231,7 @@ const GlobalStyle = createGlobalStyle`
     background: linear-gradient(to right, slateblue 0%, deepskyblue 100%);
     clip-path: polygon(0px 16%, 100% 4%, 100% 82%, 0px 94%);
   }
-`
+`;
 
 const Footer = styled.footer`
   text-align: center;
@@ -232,10 +239,10 @@ const Footer = styled.footer`
   span {
     font-size: 0.75rem;
   }
-`
+`;
 
 const Layout = ({ children, customSEO }) => {
-  const buildTime = useBuildTime()
+  const buildTime = useBuildTime();
 
   return (
     <ThemeProvider theme={theme}>
@@ -244,20 +251,20 @@ const Layout = ({ children, customSEO }) => {
         <GlobalStyle />
         {children}
         <Footer>
-          &copy; {new Date().getFullYear() || 2019} by Yannis Spyrou. All rights reserved. <br />          
+          &copy; {new Date().getFullYear() || 2019} by Yannis Spyrou. All rights reserved. <br />
         </Footer>
       </>
     </ThemeProvider>
-  )
-}
+  );
+};
 
-export default Layout
+export default Layout;
 
 Layout.propTypes = {
   children: PropTypes.oneOfType([PropTypes.array, PropTypes.node]).isRequired,
   customSEO: PropTypes.bool,
-}
+};
 
 Layout.defaultProps = {
   customSEO: false,
-}
+};
