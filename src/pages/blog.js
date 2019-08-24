@@ -61,7 +61,7 @@ const BlogPage = ({
         <p>I&apos;m a frontend developer, working with TypeScript / React &amp; AWS Serverless.</p>
       </Hero>
       <Content>
-        <SectionTitle>Latest stories</SectionTitle>
+        <SectionTitle>Latest posts</SectionTitle>
         {posts.map(post => (
           <Article
             title={post.frontmatter.title}
