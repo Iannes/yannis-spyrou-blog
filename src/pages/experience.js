@@ -7,29 +7,6 @@ import CKD from '../components/parallax/CKD';
 import Discover from '../components/parallax/Discover';
 import Bubbles from '../components/parallax/Bubbles';
 
-const styles = {
-  dark: {
-    position: 'absolute',
-    width: '100%',
-    height: '100%',
-    background: '#141821',
-  },
-  light: {
-    position: 'absolute',
-    width: '100%',
-    height: '50%',
-    background: '#eee',
-    color: '#141821',
-  },
-  lightFullHeight: {
-    position: 'absolute',
-    width: '100%',
-    height: '50%',
-    background: '#eee',
-    color: '#141821',
-  },
-};
-
 class Experience extends React.Component {
   handleMediaQuery = (mobile = '', desktop = '') =>
     typeof window !== 'undefined' && window.innerWidth < 768 ? mobile : desktop;
