@@ -15,11 +15,11 @@ class Experience extends React.Component {
     return (
       <Layout>
         <section data-light-bg>
-          <Parallax ref={ref => (this.parallax = ref)} pages={this.handleMediaQuery(4, 4)}>
+          <Parallax ref={ref => (this.parallax = ref)} pages={this.handleMediaQuery(5, 4)}>
             <Welcome />
             <Immediate onClick={() => this.parallax.scrollTo(2)} />
             <CKD onClick={() => this.parallax.scrollTo(3)} />
-            <Discover onClick={() => this.parallax.scrollTo(4)} />
+            <Discover onClick={() => this.parallax.scrollTo(0)} />
             <Bubbles />
           </Parallax>
         </section>

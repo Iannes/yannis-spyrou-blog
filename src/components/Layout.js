@@ -265,7 +265,7 @@ const Layout = ({ children, customSEO }) => {
         <GlobalStyle />
         {children}
         <Footer>
-          &copy; {new Date().getFullYear() || 2019} by Yannis Spyrou | All rights reserved <br />
+          <a href="/">Blog</a> | &copy; {new Date().getFullYear() || 2019} by Yannis Spyrou <br />
         </Footer>
       </>
     </ThemeProvider>
