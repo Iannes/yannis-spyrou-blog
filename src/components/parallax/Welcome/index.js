@@ -11,7 +11,7 @@ const Welcome = ({ onClick }) => (
       speed={-0.9}
       style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}
     >
-      <FloatingSVG />
+      <FloatingSVG bubble />
     </ParallaxLayer>
     <ParallaxLayer
       offset={0}
