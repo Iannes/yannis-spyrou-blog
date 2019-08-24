@@ -5,6 +5,10 @@ import LinkButton from '../components/parallax/LinkButton';
 import { FloatingSVG } from '../components/floatingSVG/floatingSVG';
 import CVSection from '../components/cv/CVSection';
 import copy from '../copy';
+import Welcome from '../components/parallax/Welcome';
+import Immediate from '../components/parallax/Immediate';
+import CKD from '../components/parallax/CKD';
+import Discover from '../components/parallax/Discover';
 
 const styles = {
   dark: {
@@ -41,15 +45,21 @@ const styles = {
 };
 
 class Test extends React.Component {
+  handleMediaQuery = (mobile = '', desktop = '') =>
+    // eslint-disable-next-line no-nested-ternary
+    typeof window !== 'undefined' ? (window.innerWidth < 768 ? mobile : desktop) : false;
+
   render() {
     return (
       <Layout>
         <section data-light-bg>
-          <Parallax ref={ref => (this.parallax = ref)} pages={window.innerWidth < 768 ? 5 : 4}>
+          <Parallax ref={ref => (this.parallax = ref)} pages={this.handleMediaQuery(5, 4)}>
+            <Welcome />
             <ParallaxLayer
               offset={1}
               speed={1}
-              style={window.innerWidth < 768 ? styles.lightFullHeight : styles.light}
+              style={this.handleMediaQuery(styles.lightFullHeight, styles.light)}
+              // style={window.innerWidth < 768 ? styles.lightFullHeight : styles.light}
             />
             <ParallaxLayer offset={2} speed={1} style={{ backgroundColor: '#eee' }} />
             <ParallaxLayer
@@ -57,42 +67,10 @@ class Test extends React.Component {
               speed={1}
               style={{ backgroundColor: '#fff', color: '#eee' }}
             />
-            <ParallaxLayer offset={1.2} speed={0.4} onClick={() => this.parallax.scrollTo(2)}>
-              <CVSection
-                heading={copy.experience.immediate.companyName}
-                text={copy.experience.immediate.description}
-                duties={copy.experience.immediate.duties}
-                tech={copy.experience.immediate.tech}
-                link={copy.experience.immediate.companyWebsiteLink}
-              />
-            </ParallaxLayer>
-            <ParallaxLayer
-              offset={window.innerWidth < 768 ? 2.5 : 2.1}
-              speed={0.4}
-              onClick={() => this.parallax.scrollTo(3)}
-            >
-              <CVSection
-                heading={copy.experience.ckd.companyName}
-                text={copy.experience.ckd.description}
-                duties={copy.experience.ckd.duties}
-                tech={copy.experience.ckd.tech}
-                link={copy.experience.ckd.companyWebsiteLink}
-              />
-            </ParallaxLayer>
-            <ParallaxLayer
-              offset={window.innerWidth < 768 ? 3.7 : 3.3}
-              speed={0.6}
-              onClick={() => this.parallax.scrollTo(4)}
-            >
-              <CVSection
-                heading={copy.experience.discover.companyName}
-                text={copy.experience.discover.description}
-                duties={copy.experience.discover.duties}
-                tech={copy.experience.discover.tech}
-                link={copy.experience.discover.companyWebsiteLink}
-              />
-            </ParallaxLayer>
-            <ParallaxLayer offset={window.innerWidth < 768 ? 5.3 : 4} speed={0.3}>
+            <Immediate onClick={() => this.parallax.scrollTo(2)} />
+            <CKD onClick={() => this.parallax.scrollTo(3)} />
+            <Discover onClick={() => this.parallax.scrollTo(4)} />
+            <ParallaxLayer offset={this.handleMediaQuery(5.3, 4)} speed={0.3}>
               <LinkButton buttonText="Contact" linkText="contact" />
             </ParallaxLayer>
             <ParallaxLayer offset={1.9} speed={0.1}>
@@ -100,22 +78,6 @@ class Test extends React.Component {
             </ParallaxLayer>
             <ParallaxLayer offset={2.9} speed={0.1}>
               <FloatingSVG bubble />
-            </ParallaxLayer>
-
-            <ParallaxLayer
-              offset={0}
-              speed={-0.9}
-              style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}
-            >
-              <FloatingSVG bubble />
-            </ParallaxLayer>
-            <ParallaxLayer
-              offset={0}
-              speed={0.3}
-              onClick={() => this.parallax.scrollTo(1)}
-              style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}
-            >
-              <CVSection heading={copy.welcome.heading} text={copy.welcome.bodyText} />
             </ParallaxLayer>
           </Parallax>
         </section>

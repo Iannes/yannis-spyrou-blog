@@ -2,7 +2,7 @@ import React from 'react';
 import { ParallaxLayer } from 'react-spring/renderprops-addons';
 import copy from '../../../copy';
 import CVSection from '../../cv/CVSection';
-import FloatingSVG from '../../floatingSVG/floatingSVG';
+import { FloatingSVG } from '../../floatingSVG/floatingSVG';
 
 const Welcome = ({ onClick }) => (
   <>

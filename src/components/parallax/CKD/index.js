@@ -2,26 +2,19 @@ import React from 'react';
 import { ParallaxLayer } from 'react-spring/renderprops-addons';
 import copy from '../../../copy';
 import CVSection from '../../cv/CVSection';
-import FloatingSVG from '../../floatingSVG/floatingSVG';
 
-const Welcome = ({ onClick }) => (
+const CKD = ({ onClick }) => (
   <>
-    <ParallaxLayer
-      offset={0}
-      speed={-0.9}
-      style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}
-    >
-      <FloatingSVG />
-    </ParallaxLayer>
-    <ParallaxLayer
-      offset={0}
-      speed={0.3}
-      onClick={onClick}
-      style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}
-    >
-      <CVSection heading={copy.welcome.heading} text={copy.welcome.bodyText} />
+    <ParallaxLayer offset={window.innerWidth < 768 ? 2.5 : 2.1} speed={0.4} onClick={onClick}>
+      <CVSection
+        heading={copy.experience.ckd.companyName}
+        text={copy.experience.ckd.description}
+        duties={copy.experience.ckd.duties}
+        tech={copy.experience.ckd.tech}
+        link={copy.experience.ckd.companyWebsiteLink}
+      />
     </ParallaxLayer>
   </>
 );
 
-export default Welcome;
+export default CKD;
