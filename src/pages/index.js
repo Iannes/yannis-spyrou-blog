@@ -66,7 +66,7 @@ const IndexPage = ({
         </Link>
       </Hero>
       <Content>
-        <SectionTitle>Latest stories</SectionTitle>
+        <SectionTitle>Latest posts</SectionTitle>
 
         {posts.map(post => (
           <Article
