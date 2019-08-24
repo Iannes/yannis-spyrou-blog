@@ -231,6 +231,20 @@ const GlobalStyle = createGlobalStyle`
     background: linear-gradient(to right, slateblue 0%, deepskyblue 100%);
     clip-path: polygon(0px 16%, 100% 4%, 100% 82%, 0px 94%);
   }
+  .code.token-line {
+    line-height: 28px!important;
+  }
+
+  .code {
+    border-radius: 5px;
+    margin-bottom: 1rem;
+    padding: 0.75rem;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+    font-size: 16px;
+    line-height: 26px;
+    font-weight: 100!important;    
+  }
 `;
 
 const Footer = styled.footer`

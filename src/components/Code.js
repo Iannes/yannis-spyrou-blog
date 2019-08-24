@@ -4,7 +4,7 @@
 /* eslint react/destructuring-assignment: 0 */
 import React from 'react';
 import Highlight, { defaultProps } from 'prism-react-renderer';
-import theme from 'prism-react-renderer/themes/vsDark';
+import theme from 'prism-react-renderer/themes/github';
 import { LiveProvider, LiveEditor, LiveError, LivePreview } from 'react-live';
 import styled from 'styled-components';
 
@@ -12,6 +12,11 @@ const StyledEditor = styled(LiveEditor)`
   background: ${theme.plain.backgroundColor};
   border-radius: 5px;
   margin-bottom: 1rem;
+  padding: 0.75rem;
+  border-radius: 5px;
+  margin-bottom: 1rem;
+  font-size: 16px;
+  line-height: 22px;
 `;
 
 const Code = ({ codeString, language, ...props }) => {
@@ -27,7 +32,7 @@ const Code = ({ codeString, language, ...props }) => {
   return (
     <Highlight {...defaultProps} code={codeString} language={language} theme={theme}>
       {({ className, style, tokens, getLineProps, getTokenProps }) => (
-        <pre className={className} style={style}>
+        <pre className="code" style={style}>
           {tokens.map((line, i) => (
             <article {...getLineProps({ line, key: i })}>
               {line.map((token, key) => (

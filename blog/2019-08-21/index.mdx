@@ -15,11 +15,11 @@ In this post we will learn how to install how to query data from the AppSync API
 
 ### Apollo Client
 
-Apollo client is a great tool that helps us build client 
+Apollo client is a great tool that helps us build client
 applications using a GraphQL API. We will be interacting with AppSync using React Apollo Hooks.
 
-We are going to be using a simple example for learning purposes. 
-We can use the a simple Todo App to demonstarte how Apollo Hooks work, 
+We are going to be using a simple example for learning purposes.
+We can use the a simple Todo App to demonstarte how Apollo Hooks work,
 but before we do anything we have to set this up.
 
 Firstly we need to install our dependencies.
@@ -30,7 +30,7 @@ $ yarn add apollo-react-hooks || npm install apollo-react-hooks --save
 
 Now we need to wrap App.js with the Apollo Hooks Provider.
 
-```js
+```jsx
 // src/App.js
 import { withAuthenticator } from 'aws-amplify-react';
 // Add the following lines to your App.js imports
@@ -68,10 +68,10 @@ export default withAuthenticator(WithProviders, true);
 #### Queries
 
 As you can see in the `App.js` file there is a new import apart from the Apollo Hooks.
-This is the `ListTodos` component, which is responsible 
+This is the `ListTodos` component, which is responsible
 for querying and listing our list of todos.
 
-```js
+```jsx
 import React from "react";
 import gql from "graphql-tag";
 import { useQuery } from "react-apollo-hooks";
@@ -90,33 +90,23 @@ const LIST_TODOS = gql`
 `;
 
 const ListTodos = () => {
-
   const { data, error, loading } = useQuery(LIST_TODOS);
-
   if (error) return "Error!"; // You probably want to do more here!
-
   if (loading) return "loading..."; // You can also show a spinner here.
 
   return (
-
     <ul>
       {listTodos &&
         listTodos.items.map(todo => {
           return (
-            <Todo 
-              key={todo.id} 
-              name={todo.name} 
-              desc={todo.description}
-            />
+            <Todo key={todo.id} name={todo.name} desc={todo.description} />
           );
         })}
     </ul>
-    
   );
 };
 
 export default ListTodos;
-
 ```
 
 And that's all it takes to query data from our AppSync API using Apollo Hooks!
