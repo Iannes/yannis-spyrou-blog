@@ -73,7 +73,7 @@ class Test extends React.Component {
               />
             </ParallaxLayer>
 
-            <ExperienceHeading />
+            <ExperienceHeading onClick={() => this.parallax.scrollTo(1.9)} />
 
             <ParallaxLayer
               offset={0}
@@ -85,7 +85,7 @@ class Test extends React.Component {
             <ParallaxLayer
               offset={0}
               speed={0.3}
-              onClick={() => this.parallax.scrollTo(1)}
+              onClick={() => this.parallax.scrollTo(0.6)}
               style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}
             >
               <CVSection heading={copy.welcome.heading} text={copy.welcome.bodyText} />

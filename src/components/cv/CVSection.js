@@ -1,6 +1,21 @@
 import React from 'react';
 import styled from 'styled-components';
 
+const ScrollDownArrow = styled.article`
+  border-style: solid;
+  border-width: 0.25em 0.25em 0 0;
+  content: '';
+  display: inline-block;
+  height: 1.45em;
+  left: 1.15em;
+  position: relative;
+  top: 1.15em;
+  transform: rotate(135deg);
+  vertical-align: top;
+  width: 1.45em;
+  opacity: 0.3;
+`;
+
 const Container = styled.article`
   width: 75%;
   margin: auto;
