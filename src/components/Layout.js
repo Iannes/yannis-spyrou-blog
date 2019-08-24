@@ -194,7 +194,7 @@ const GlobalStyle = createGlobalStyle`
     color: #e2e7f0;
   }
   [data-light-bg] {
-    background: #e9e1fb;    
+    background: #eee;    
     height: 100vh;    
   }
   [data-deepSkyBlue] {    

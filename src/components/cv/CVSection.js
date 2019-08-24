@@ -9,11 +9,10 @@ const ScrollDownArrow = styled.article`
   height: 1.45em;
   left: 1.15em;
   position: relative;
-  top: 1.15em;
+  top: 3em;
   transform: rotate(135deg);
   vertical-align: top;
   width: 1.45em;
-  opacity: 0.3;
 `;
 
 const Container = styled.article`
@@ -75,12 +74,19 @@ const BodyText = styled.p`
       line-height: 30px;
     }
 }`;
+const Title = styled.h1`
+    padding: 0;
+    margin: 0 0 2rem;
+    color: #cd3873;
+    color: ${props => (props.headingColor ? `#cd3873` : `#d02e77`)};
+    width: 100%;
+}`;
 
 const styles = {
   heading: {
     padding: 0,
     margin: '0 0 2rem',
-    color: '#eee',
+    color: '#cd3873',
     width: '100%',
   },
   headingColor: {
@@ -104,17 +110,15 @@ const List = ({ data = [], heading = '' }) => (
 
 const CVSection = ({ heading = '', text = '', tech = '', link = '', headingColor = false }) => (
   <Container>
-    {heading && (
-      <h1 style={headingColor ? styles.headingColor : styles.heading}>
-        {link ? (
-          <a rel="noopener noreferrer" target="_blank" href={link}>
-            {heading}
-          </a>
-        ) : (
-          heading
-        )}
-      </h1>
-    )}
+    <Title headingColor={headingColor}>
+      {link ? (
+        <a rel="noopener noreferrer" target="_blank" href={link}>
+          {heading}
+        </a>
+      ) : (
+        heading
+      )}
+    </Title>
     {text && <BodyText>{text}</BodyText>}
     <section style={styles.flex}>
       {tech && <List heading="Technologies Used:" data={tech} />}
