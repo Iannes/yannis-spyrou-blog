@@ -1,4 +1,5 @@
 import React from 'react';
+import styled from 'styled-components';
 import { Parallax, ParallaxLayer } from 'react-spring/renderprops-addons';
 import { Layout } from '../components';
 import LinkButton from '../components/parallax/LinkButton';
@@ -6,6 +7,14 @@ import { FloatingSVG } from '../components/floatingSVG/floatingSVG';
 import ExperienceHeading from '../components/parallax/ExperienceHeading';
 import CVSection from '../components/cv/CVSection';
 import copy from '../copy';
+
+const ButtonWrapper = styled.section`
+  display: flex;
+  width: 75%;
+  margin: auto;
+  padding: 50px;
+  justify-content: center;
+`;
 
 const styles = {
   dark: {
@@ -36,7 +45,7 @@ class Test extends React.Component {
             <ParallaxLayer offset={1} speed={1} style={styles.dark} />
             <ParallaxLayer offset={2} speed={1} style={{ backgroundColor: '#141821' }} />
             <ParallaxLayer offset={3} speed={1} style={{ backgroundColor: '#141821' }} />
-            <ParallaxLayer offset={2} speed={0.4}>
+            <ParallaxLayer offset={2} speed={0.4} onClick={() => this.parallax.scrollTo(3.2)}>
               <CVSection
                 heading={copy.experience.immediate.companyName}
                 text={copy.experience.immediate.description}
@@ -45,7 +54,7 @@ class Test extends React.Component {
                 link={copy.experience.immediate.companyWebsiteLink}
               />
             </ParallaxLayer>
-            <ParallaxLayer offset={3.4} speed={0.4}>
+            <ParallaxLayer offset={3.4} speed={0.4} onClick={() => this.parallax.scrollTo(4.4)}>
               <CVSection
                 heading={copy.experience.ckd.companyName}
                 text={copy.experience.ckd.description}
@@ -54,7 +63,7 @@ class Test extends React.Component {
                 link={copy.experience.ckd.companyWebsiteLink}
               />
             </ParallaxLayer>
-            <ParallaxLayer offset={4.7} speed={0.6}>
+            <ParallaxLayer offset={4.7} speed={0.6} onClick={() => this.parallax.scrollTo(5)}>
               <CVSection
                 heading={copy.experience.discover.companyName}
                 text={copy.experience.discover.description}
@@ -63,6 +72,7 @@ class Test extends React.Component {
                 link={copy.experience.discover.companyWebsiteLink}
               />
             </ParallaxLayer>
+
             <ExperienceHeading />
 
             <ParallaxLayer
