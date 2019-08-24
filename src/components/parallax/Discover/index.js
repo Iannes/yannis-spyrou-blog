@@ -7,7 +7,7 @@ import LinkButton from '../LinkButton';
 
 const Discover = ({ onClick }) => (
   <>
-    <ParallaxLayer offset={handleMediaQuery(4, 3)} speed={0.6} onClick={onClick}>
+    <ParallaxLayer offset={handleMediaQuery(3.8, 3)} speed={0.6} onClick={onClick}>
       <CVSection
         heading={copy.experience.discover.companyName}
         text={copy.experience.discover.description}
@@ -15,9 +15,8 @@ const Discover = ({ onClick }) => (
         tech={copy.experience.discover.tech}
         link={copy.experience.discover.companyWebsiteLink}
       />
-      {typeof window !== 'undefined' && window.innerWidth < 768 ? null : (
-        <LinkButton buttonText="Contact" linkText="/contact" />
-      )}
+
+      <LinkButton buttonText="Contact" linkText="/contact" />
     </ParallaxLayer>
   </>
 );

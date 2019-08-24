@@ -5,7 +5,7 @@ import CVSection from '../../cv/CVSection';
 
 const Immediate = ({ onClick }) => (
   <>
-    <ParallaxLayer offset={1.2} speed={0.4} onClick={onClick}>
+    <ParallaxLayer offset={1} speed={0.4} onClick={onClick}>
       <CVSection
         heading={copy.experience.immediate.companyName}
         text={copy.experience.immediate.description}
