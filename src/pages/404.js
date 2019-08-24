@@ -37,7 +37,7 @@ const NotFoundPage = () => (
           <Link to="/">{config.siteTitle}</Link>
         </Header>
         <Hero>
-          <h2>Oops!</h2>
+          <h2>Eeer... What happened now?</h2>
           <Iris />
           <Iris />
           <p>Looks like you got lost! Click on the button below to head over to the home page.</p>
