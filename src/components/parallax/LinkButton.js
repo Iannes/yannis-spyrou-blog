@@ -5,7 +5,7 @@ import { Button } from '..';
 
 const LinkButton = ({ buttonText = '', linkText = '' }) => (
   <ParallaxLayer
-    offset={0}
+    offset={0.5}
     speed={0.3}
     style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}
   >
