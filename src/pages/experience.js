@@ -14,7 +14,7 @@ class Experience extends React.Component {
   render() {
     return (
       <Layout>
-        <section data-light-bg>
+        <section data-white-bg>
           <Parallax ref={ref => (this.parallax = ref)} pages={this.handleMediaQuery(5, 4)}>
             <Welcome />
             <Immediate onClick={() => this.parallax.scrollTo(2)} />

@@ -250,6 +250,7 @@ const GlobalStyle = createGlobalStyle`
 const Footer = styled.footer`
   text-align: center;
   padding: 3rem 1rem;
+  background: ${props => props.theme.colors.grey.secondary};
   span {
     font-size: 0.75rem;
   }
