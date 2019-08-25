@@ -65,5 +65,19 @@ export default {
       ],
       tech: ['Sass', 'Gulp', 'Bitbucket'],
     },
+    freelance: {
+      companyName: 'Freelance',
+      companyWebsiteLink: 'https://www.yannisspyrou.com/',
+      title: 'Front end developer',
+      description:
+        'Helping small to medium-sized businesses with custom solutions built using JAM Stack.',
+      tech: [
+        'Front End : Gatsby, React / MDX, Styled Components, TypeScript',
+        'CMS : Netlify CMS',
+        'Serverless Backend: AWS AppSync, AWS Amplify, CloudFormation',
+        'Tools: Webpack, Babel, Parcel, ESLint',
+        'Version Control: Git',
+      ],
+    },
   },
 };

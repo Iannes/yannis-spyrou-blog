@@ -3,7 +3,6 @@ import { ParallaxLayer } from 'react-spring/renderprops-addons';
 import copy from '../../../copy';
 import CVSection from '../../cv/CVSection';
 import { handleMediaQuery } from '../../../helpers/handleMediaQuery';
-import LinkButton from '../LinkButton';
 
 const Discover = ({ onClick }) => (
   <>
@@ -15,8 +14,6 @@ const Discover = ({ onClick }) => (
         tech={copy.experience.discover.tech}
         link={copy.experience.discover.companyWebsiteLink}
       />
-
-      <LinkButton buttonText="Contact" linkText="/contact" />
     </ParallaxLayer>
   </>
 );

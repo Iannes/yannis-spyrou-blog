@@ -5,6 +5,7 @@ import Welcome from '../components/parallax/Welcome';
 import Immediate from '../components/parallax/Immediate';
 import CKD from '../components/parallax/CKD';
 import Discover from '../components/parallax/Discover';
+import Freelance from '../components/parallax/Freelance';
 import Bubbles from '../components/parallax/Bubbles';
 
 class Experience extends React.Component {
@@ -15,11 +16,12 @@ class Experience extends React.Component {
     return (
       <Layout>
         <section data-light-bg>
-          <Parallax ref={ref => (this.parallax = ref)} pages={this.handleMediaQuery(5, 4)}>
+          <Parallax ref={ref => (this.parallax = ref)} pages={5}>
             <Welcome />
             <Immediate onClick={() => this.parallax.scrollTo(2)} />
             <CKD onClick={() => this.parallax.scrollTo(3)} />
-            <Discover onClick={() => this.parallax.scrollTo(0)} />
+            <Discover onClick={() => this.parallax.scrollTo(4)} />
+            <Freelance onClick={() => this.parallax.scrollTo(0)} />
             <Bubbles />
           </Parallax>
         </section>
