@@ -1,8 +1,9 @@
 {
-  "extends": ["airbnb", "prettier", "prettier/react"],
   "parser": "babel-eslint",
+  "extends": ["airbnb", "prettier", "prettier/react"],
   "parserOptions": {
-    "ecmaVersion": 2017,
+    "ecmaVersion": 2018,
+    "sourceType": "module",
     "ecmaFeatures": {
       "experimentalObjectRestSpread": true,
       "impliedStrict": true,
@@ -12,7 +13,6 @@
   "env": {
     "browser": true,
     "node": true,
-    "jquery": true,
     "jest": true
   },
   "rules": {
