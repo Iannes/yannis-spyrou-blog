@@ -1,13 +1,10 @@
-/* eslint jsx-a11y/label-has-for:0 */
-import React from 'react';
+import { graphql, Link } from 'gatsby';
 import PropTypes from 'prop-types';
+import React from 'react';
 import Helmet from 'react-helmet';
-import { Link, graphql } from 'gatsby';
 import styled from 'styled-components';
-
-import { Layout, Article, Wrapper, SectionTitle, Header } from '../components';
-
 import config from '../../config';
+import { Article, Header, Layout, SectionTitle, Wrapper } from '../components';
 
 const Content = styled.article`
   grid-column: 2;

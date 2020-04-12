@@ -1,5 +1,5 @@
-import React from 'react';
 import { Link } from 'gatsby';
+import React from 'react';
 import { ParallaxLayer } from 'react-spring/renderprops-addons';
 import { Button } from '..';
 

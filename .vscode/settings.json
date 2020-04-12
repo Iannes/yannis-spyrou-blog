@@ -1,0 +1,33 @@
+{
+  // basic settings
+  "editor.formatOnSave": true,
+  "editor.tabSize": 2,
+  "files.insertFinalNewline": true,
+
+  // turn off formatOnSave for JS, JSX, TS and TSX, we will do this via eslint
+  "[javascript]": { "editor.formatOnSave": false },
+  "[javascriptreact]": { "editor.formatOnSave": false },
+  "[typescript]": { "editor.formatOnSave": false },
+  "[typescriptreact]": { "editor.formatOnSave": false },
+
+  // ESLint wont lint TS or TSX by default
+  "eslint.validate": [
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact"
+  ],
+
+  // tell the ESLint plugin to run on save
+  "editor.codeActionsOnSave": { "source.fixAll.eslint": true },
+
+  // Optional BUT IMPORTANT: If you have the prettier extension enabled for other
+  // languages like CSS and HTML, turn it off for JS since we are doing it through Eslint
+  // already
+  "prettier.disableLanguages": [
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact"
+  ]
+}

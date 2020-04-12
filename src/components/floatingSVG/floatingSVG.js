@@ -1,12 +1,13 @@
-import React from 'react';
-import './floating.css';
-import './diamond.css';
-import './bubble.css';
+import React from "react";
+import "./bubble.css";
+import "./diamond.css";
+import "./floating.css";
 
 const Bubble = () => (
-  <section className="container">
-    <figure className="bubble" />
-  </section>
+
+<section className="container">
+  <figure className="bubble" />
+</section>
 );
 
 export const FloatingSVG = ({ diamond = false, bubble = false }) => (

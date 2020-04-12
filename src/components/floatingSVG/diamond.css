@@ -1,70 +1,69 @@
 .diamond {
-    width: 0;
-    height: 0;
-    border: 50px solid transparent;
-    border-bottom-color: var(--primary);
-    position: relative;
-    top: -273px;
-    right: -900px;
-    z-index: 0;
-    opacity: var(--shapes-opacity);
+width: 0;
+height: 0;
+border: 50px solid transparent;
+border-bottom-color: var(--primary);
+position: relative;
+top: -273px;
+right: -900px;
+z-index: 0;
+opacity: var(--shapes-opacity);
 }
 
 .diamond:after {
-    content: '';
-    position: absolute;
-    left: -50px;
-    top: 50px;
-    width: 0;
-    height: 0;
-    border: 50px solid transparent;
-    border-top-color: var(--primary);
+content: '';
+position: absolute;
+left: -50px;
+top: 50px;
+width: 0;
+height: 0;
+border: 50px solid transparent;
+border-top-color: var(--primary);
 }
 
-
 .diamond-shield {
-    width: 0;
-    height: 0;
-    border: 50px solid transparent;
-    border-bottom: 20px solid var(--primary);
-    position: relative;
-    top: -50px;
-    opacity: var(--shapes-opacity);
+width: 0;
+height: 0;
+border: 50px solid transparent;
+border-bottom: 20px solid var(--primary);
+position: relative;
+top: -50px;
+opacity: var(--shapes-opacity);
 }
 
 .diamond-shield:after {
-    content: '';
-    position: absolute;
-    left: -50px;
-    top: 20px;
-    width: 0;
-    height: 0;
-    border: 50px solid transparent;
-    border-top: 70px solid var(--primary);
-    opacity: var(--shapes-opacity);
+content: '';
+position: absolute;
+left: -50px;
+top: 20px;
+width: 0;
+height: 0;
+border: 50px solid transparent;
+border-top: 70px solid var(--primary);
+opacity: var(--shapes-opacity);
 }
 
 .cut-diamond {
-    border-style: solid;
-    border-color: transparent transparent var(--primary) transparent;
-    border-width: 0 25px 25px 25px;
-    height: 0;
-    width: 50px;
-    box-sizing: content-box;
-    position: relative;
-    margin: 20px 0 50px 0;
-    opacity: var(--shapes-opacity);
+border-style: solid;
+border-color: transparent transparent var(--primary) transparent;
+border-width: 0 25px 25px 25px;
+height: 0;
+width: 50px;
+box-sizing: content-box;
+position: relative;
+margin: 20px 0 50px 0;
+opacity: var(--shapes-opacity);
 }
 
 .cut-diamond:after {
-    content: "";
-    position: absolute;
-    top: 25px;
-    left: -25px;
-    width: 0;
-    height: 0;
-    border-style: solid;
-    border-color: var(--primary) transparent transparent transparent;
-    border-width: 70px 50px 0 50px;
-    opacity: var(--shapes-opacity);
+content: "";
+position: absolute;
+top: 25px;
+left: -25px;
+width: 0;
+height: 0;
+border-style: solid;
+border-color: var(--primary) transparent transparent transparent;
+border-width: 70px 50px 0 50px;
+opacity: var(--shapes-opacity);
 }

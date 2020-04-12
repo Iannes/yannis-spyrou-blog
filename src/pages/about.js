@@ -1,12 +1,9 @@
-/* eslint jsx-a11y/label-has-for:0 */
-
+import { Link } from 'gatsby';
 import React from 'react';
 import Helmet from 'react-helmet';
-import { Link } from 'gatsby';
 import styled from 'styled-components';
-import { Layout, Wrapper, Header, Button } from '../components';
-
 import config from '../../config';
+import { Button, Header, Layout, Wrapper } from '../components';
 
 const Content = styled.article`
   grid-column: 2;
