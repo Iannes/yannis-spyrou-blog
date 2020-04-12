@@ -1,9 +1,9 @@
-import PropTypes from "prop-types";
-import React from "react";
-import styled, { createGlobalStyle, ThemeProvider } from "styled-components";
-import theme from "../../config/theme";
-import useBuildTime from "../hooks/useBuildTime";
-import SEO from "./SEO";
+import PropTypes from 'prop-types';
+import React from 'react';
+import styled, { createGlobalStyle, ThemeProvider } from 'styled-components';
+import theme from '../../config/theme';
+import useBuildTime from '../hooks/useBuildTime';
+import SEO from './SEO';
 
 const GlobalStyle = createGlobalStyle`
 _,
@@ -246,32 +246,39 @@ font-weight: 100!important;
  }
 `;
 
-const Footer = styled.footer`text-align: center; padding: 3rem 1rem; background: ${props => props.theme.colors.grey.secondary}; span { font-size: 0.75rem; }`;
+const Footer = styled.footer`
+  text-align: center;
+  padding: 3rem 1rem;
+  background: ${props => props.theme.colors.grey.secondary};
+  span {
+    font-size: 0.75rem;
+  }
+`;
 
 const Layout = ({ children, customSEO }) => {
-const buildTime = useBuildTime();
+  const buildTime = useBuildTime();
 
-return (
-<ThemeProvider theme={theme}>
-<>
-{!customSEO && <SEO buildTime={buildTime} />}
-<GlobalStyle />
-{children}
-<Footer>
-<a href="/">Blog</a> | &copy; {new Date().getFullYear() || 2019} by Yannis Spyrou <br />
-</Footer>
-</>
-</ThemeProvider>
-);
+  return (
+    <ThemeProvider theme={theme}>
+      <>
+        {!customSEO && <SEO buildTime={buildTime} />}
+        <GlobalStyle />
+        {children}
+        <Footer>
+          <a href="/">Blog</a> | &copy; {new Date().getFullYear() || 2020} by Yannis Spyrou <br />
+        </Footer>
+      </>
+    </ThemeProvider>
+  );
 };
 
 export default Layout;
 
 Layout.propTypes = {
-children: PropTypes.oneOfType([PropTypes.array, PropTypes.node]).isRequired,
-customSEO: PropTypes.bool,
+  children: PropTypes.oneOfType([PropTypes.array, PropTypes.node]).isRequired,
+  customSEO: PropTypes.bool,
 };
 
 Layout.defaultProps = {
-customSEO: false,
+  customSEO: false,
 };
