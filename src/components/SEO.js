@@ -165,7 +165,7 @@ return (
 <meta name="twitter:description" content={description} />
 <meta name="twitter:image" content={image} />
 <meta name="twitter:image:alt" content={description} />
-{/_ Insert schema.org data conditionally (webpage/article) + everytime (breadcrumbs) _/}
+<link rel="shortcut icon" href="icons/icon-48x48.png"/>
 {!article && <script type="application/ld+json">{JSON.stringify(schemaOrgWebPage)}</script>}
 {article && <script type="application/ld+json">{JSON.stringify(schemaArticle)}</script>}
 <script type="application/ld+json">{JSON.stringify(breadcrumb)}</script>
