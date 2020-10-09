@@ -73,6 +73,6 @@
     "gatsby-plugin-sharp": "^2.6.40"
   },
   "resolutions": {
-    "readable-stream": "3.6.0"
+    "readable-stream": "^2.3.0"
   }
 }
