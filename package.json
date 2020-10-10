@@ -36,7 +36,7 @@
     "react-spring": "^8.0.27",
     "styled-components": "^4.4.1",
     "typeface-bitter": "^0.0.71",
-    "typeface-open-sans": "^0.0.75"
+    "typeface-open-sans": "^1.1.13"
   },
   "keywords": [
     "gatsby",
