@@ -14307,10 +14307,10 @@ typedarray@^0.0.6:
   resolved "https://registry.yarnpkg.com/typedarray/-/typedarray-0.0.6.tgz#867ac74e3864187b1d3d47d996a78ec5c8830777"
   integrity sha1-hnrHTjhkGHsdPUfZlqeOxciDB3c=
 
-typeface-bitter@^0.0.71:
-  version "0.0.71"
-  resolved "https://registry.yarnpkg.com/typeface-bitter/-/typeface-bitter-0.0.71.tgz#bfd97a1b3a52c1275319ca169f92e3419c7abf8e"
-  integrity sha512-F8fJUCWtVTkgw2UfxaYOQt3lPsrmGKYiUC3ZOBcS88QuRpN0qd29s07o2q07vow2E+KP8LLuezbrZ/rTMw/XlQ==
+typeface-bitter@^1.1.13:
+  version "1.1.13"
+  resolved "https://registry.yarnpkg.com/typeface-bitter/-/typeface-bitter-1.1.13.tgz#7ba12392bfed738ccb8e7723b36ae24ec2a7aadd"
+  integrity sha512-+EG404xR8AtpYGDys/2vV2qMqG0LQJNI4brTm11D8r+vaJ9YfOSKK0tVsabRZX7XbDhXbmjHFT6Phye7+LjV0g==
 
 typeface-open-sans@^0.0.75:
   version "0.0.75"
