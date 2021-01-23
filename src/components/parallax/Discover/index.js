@@ -17,7 +17,7 @@ const Discover = ({ onClick }) => (
         link={copy.experience.discover.companyWebsiteLink}
       />
 
-      <LinkButton buttonText="Contact" linkText="/contact" />
+      <LinkButton buttonText="Contact" linkText="contact" />
     </ParallaxLayer>
 
   </>
