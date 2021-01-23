@@ -15,7 +15,7 @@ module.exports = {
   userTwitter: '@SpyrouYannis', // Twitter Username - Optional
   ogSiteName: 'Yannis Spyrou', // Facebook Site Name - Optional
   ogLanguage: 'en_US', // Facebook Language
-  // googleAnalyticsID:
+  googleAnalyticsID: "G-60X2P2JS80",
   // Manifest and Progress color
   // See: https://developers.google.com/web/fundamentals/web-app-manifest/
   themeColor: '#3498DB',
