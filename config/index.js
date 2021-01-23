@@ -10,7 +10,7 @@ module.exports = {
   siteBanner: '/social/banner.jpg', // Your image for og:image tag. You can find it in the /static folder
   favicon: 'favicon.ico', // Your image for favicons. You can find it in the /src folder
   siteDescription: 'Expert Software Engineer | Serverless Advocate | Music Lover. I help businesses grow', // Your site description
-  author: 'Iannes', // Author for schemaORGJSONLD
+  author: 'Yannis Spyrou', // Author for schemaORGJSONLD
   siteLogo: '/social/logo.png', // Image for schemaORGJSONLD
   userTwitter: '@SpyrouYannis', // Twitter Username - Optional
   ogSiteName: 'Yannis Spyrou', // Facebook Site Name - Optional
