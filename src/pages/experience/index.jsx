@@ -4,7 +4,7 @@ import { Layout } from '../../components';
 import Bubbles from '../../components/parallax/Bubbles';
 import Welcome from "../../components/parallax/Welcome";
 import copy from "../../copy";
-import { CompaniesList } from "./companiesList";
+import CompaniesList from "./companiesList";
 
 class Experience extends React.Component {
 

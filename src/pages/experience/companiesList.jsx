@@ -2,7 +2,7 @@ import React from 'react';
 import { ParallaxSection } from "../../components/parallax/ParallaxSection";
 import copy from "../../copy";
 
-export const CompaniesList = ({ parallax }) => {
+const CompaniesList = ({ parallax }) => {
 
   const [list, setList] = React.useState([])
 
@@ -10,8 +10,9 @@ export const CompaniesList = ({ parallax }) => {
     setList(copy)
   }, [])
 
-  const handleMediaQuery = (mobile = '', desktop = '') =>
-    typeof window !== 'undefined' && window.innerWidth < 768 ? mobile : desktop;
+  const handleMediaQuery = (mobile = '', desktop = '') => {
+    return typeof window !== 'undefined' && window.innerWidth < 768 ? mobile : desktop;
+  }
 
   const handleMobileParallax = (company) => {
     switch (company.companyKey) {
@@ -51,3 +52,5 @@ export const CompaniesList = ({ parallax }) => {
     }) : null
   }
 }
+
+export default CompaniesList
